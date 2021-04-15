@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/MainSystem.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/01.Scenes/SaSuJin_MiniGame.unity
+    guid: 93be43a990da28e43ac4e899e962763d
   m_configObjects: {}
