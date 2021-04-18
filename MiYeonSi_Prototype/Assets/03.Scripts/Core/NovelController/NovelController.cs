@@ -36,10 +36,12 @@ public class NovelController : MonoBehaviour
     void Update()
     {
         //testing
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
+        if (Input.GetKeyDown(KeyCode.RightArrow))      
             Next();
-        }
+        
+        if (Input.GetMouseButtonDown(0))
+            Next();
+
     }
 
     bool _next = false;
