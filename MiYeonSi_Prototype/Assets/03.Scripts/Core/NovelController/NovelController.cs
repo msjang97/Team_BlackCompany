@@ -8,6 +8,7 @@ public class NovelController : MonoBehaviour
     public static NovelController instance;
     //private string txtFileName = null;
     private bool isAfterMiniGame = false;
+    public GameObject sasujin_mini;
 
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
     List<string> data = new List<string>();
@@ -171,7 +172,9 @@ public class NovelController : MonoBehaviour
             ChoiceManager.P_instance.choices = choices; //선택지 텍스트 저장.
             ChoiceManager.P_instance.actions = actions; //선택지 대답 저장.
 
-            SceneManager.LoadScene(miniGameName); // 각 미니게임 호출해주기.
+            //SceneManager.LoadScene(miniGameName); // 각 미니게임 호출해주기.
+            //미니게임 캔버스 띄우기
+            sasujin_mini.SetActive(true);
         }
 
         //chapterProgress++;

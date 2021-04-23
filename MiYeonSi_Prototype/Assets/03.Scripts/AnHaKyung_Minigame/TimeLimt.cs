@@ -23,6 +23,6 @@ public class TimeLimt : MonoBehaviour
             SceneManager.LoadScene("MiFive");
         }
 
-        text.text = " Time : " +  Mathf.Round(rTime);
+        text.text = " " +  Mathf.Round(rTime);
     }
 }
