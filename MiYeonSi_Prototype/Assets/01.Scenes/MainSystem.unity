@@ -2348,6 +2348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880a1a958c6ad03419283b3963ebdae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sasujin_mini: {fileID: 1566972138}
   chapterProgress: 0
   cachedLastSpeaker: 
 --- !u!1 &735295793
