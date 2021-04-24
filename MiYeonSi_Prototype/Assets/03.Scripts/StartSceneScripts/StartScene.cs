@@ -4,9 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour
-{  
-    public void LoadGameScene() //게임 시작
+{
+    public void StartGameScene() // 게임 시작
     {
+        SceneManager.LoadScene("MainSystem");
+    }
+
+    public void LoadGameScene() // 게임 이어하기
+    {
+        SaveData.P_instance.isLoadData = true;
         SceneManager.LoadScene("MainSystem");
     }
 

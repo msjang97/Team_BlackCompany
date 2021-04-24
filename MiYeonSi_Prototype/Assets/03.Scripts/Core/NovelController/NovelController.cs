@@ -9,6 +9,7 @@ public class NovelController : MonoBehaviour
     //private string txtFileName = null;
     private bool isAfterMiniGame = false;
     public GameObject sasujin_mini;
+    string _chapterName;
 
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
     List<string> data = new List<string>();
@@ -22,16 +23,29 @@ public class NovelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(SaveData.P_instance.isLoadData == true)
+        {
+            SaveData.P_instance.LoadGame();
+            _chapterName = SaveData.P_instance.ChapterName;
+
+            LoadChapterFile(_chapterName);
+            return;
+        }
+
         if (ChoiceManager.P_instance.savedChapterProgress == 0) //처음 시작할때만 
-            LoadChapterFile("Chapter0_start");                  
+        {
+            _chapterName = "Chapter0_start";
+        }
         else
         {
-            LoadChapterFile("Chapter0_start"); //추후에 챕터 바뀌는거 넣기.
+            _chapterName = "Chapter0_start"; //추후에 챕터 바뀌는거 넣기.
             isAfterMiniGame = true;
 
             //LoadChapterFile("SaSuJin_" + ChoiceManager.P_instance.P_chapterNum + ChoiceManager.P_instance.P_selectedNum);
             //ChoiceManager.P_instance.P_selectedNum = null;
         }
+
+        LoadChapterFile(_chapterName);
     }
 
     void Update()
@@ -71,6 +85,11 @@ public class NovelController : MonoBehaviour
     {
         //the progress through the lines in this chapter.
         chapterProgress = 0; //번호가 여기서 초기화됌.
+        if (SaveData.P_instance.isLoadData == true)
+        {
+            SaveData.P_instance.isLoadData = false;
+            chapterProgress = SaveData.P_instance.SavedChapterProgress;
+        }
 
         while (chapterProgress < data.Count)
         {
@@ -283,6 +302,8 @@ public class NovelController : MonoBehaviour
                 break;
             case "setBackground":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
+                SaveData.P_instance.SaveGame(_chapterName, chapterProgress);
+                Next(); // 배경 전환되면서 같이 전환.
                 break;
             case "setCinematic":
                 Command_SetLayerImage(data[1], BCFC.instance.cinematic);
