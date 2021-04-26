@@ -924,7 +924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1459482703}
-        m_MethodName: LoadGameScene
+        m_MethodName: StartGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1798,6 +1798,7 @@ GameObject:
   - component: {fileID: 1459482702}
   - component: {fileID: 1459482701}
   - component: {fileID: 1459482703}
+  - component: {fileID: 1459482704}
   m_Layer: 0
   m_Name: StartSceneManager
   m_TagString: Untagged
@@ -1845,6 +1846,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efa30cde5a52ab24995bca7073863ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459482704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459482700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701fa637c2bc98b4db35c91859065b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1547408641
