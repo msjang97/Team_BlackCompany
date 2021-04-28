@@ -10,6 +10,8 @@ public class NovelController : MonoBehaviour
     private bool isAfterMiniGame = false;
     string _chapterName;
 
+    public bool next_box;
+
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
     List<string> data = new List<string>();
     /// <summary> The progress in the current data list. /// </summary>
@@ -22,7 +24,8 @@ public class NovelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SaveData.P_instance.isLoadData == true)
+        next_box = false;
+        if (SaveData.P_instance.isLoadData == true)
         {
             SaveData.P_instance.LoadGame();
             _chapterName = SaveData.P_instance.ChapterName;
@@ -49,12 +52,11 @@ public class NovelController : MonoBehaviour
 
     void Update()
     {
-        //testing
-        if (Input.GetKeyDown(KeyCode.RightArrow))      
+        if (next_box)
+        {
             Next();
-        
-        if (Input.GetMouseButtonDown(0))
-            Next();
+            next_box = false;
+        }
 
     }
 
