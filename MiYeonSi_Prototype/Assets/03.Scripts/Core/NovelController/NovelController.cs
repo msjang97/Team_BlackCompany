@@ -8,7 +8,6 @@ public class NovelController : MonoBehaviour
     public static NovelController instance;
     //private string txtFileName = null;
     private bool isAfterMiniGame = false;
-    public GameObject sasujin_mini;
     string _chapterName;
 
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
