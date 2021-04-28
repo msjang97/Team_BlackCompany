@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/01.Scenes/MainSystem.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/01.Scenes/StartScene.unity
+    guid: 480fc4d2ebdebb448acb5786cb95aaae
+  - enabled: 1
     path: Assets/01.Scenes/SaSuJin_MiniGame.unity
     guid: 93be43a990da28e43ac4e899e962763d
   - enabled: 1
-    path: Assets/01.Scenes/StartScene.unity
-    guid: 480fc4d2ebdebb448acb5786cb95aaae
+    path: Assets/01.Scenes/Anhakyung_Minigame.unity
+    guid: eabbc774cc041ae4faa9388dbda6862d
+  - enabled: 1
+    path: Assets/01.Scenes/Minseok_Minigame.unity
+    guid: 26ed3274fb1f07a40880d3a8500cceb0
   m_configObjects: {}
