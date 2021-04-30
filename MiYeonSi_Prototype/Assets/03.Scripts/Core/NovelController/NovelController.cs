@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class NovelController : MonoBehaviour
 {
@@ -65,12 +66,39 @@ public class NovelController : MonoBehaviour
     {
         _next = true;
     }
-
+    static List<string> ArrayToList(string[] array, bool removeBlankLines = true)
+    {
+        List<string> list = new List<string>();
+        for (int i = 0; i < array.Length; i++)
+        {
+            string s = array[i];
+            if (s.Length > 0 || !removeBlankLines)
+            {
+                list.Add(s);
+            }
+        }
+        return list;
+    }
     public void LoadChapterFile(string fileName)
     {
-        data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
-        cachedLastSpeaker = "";
+        TextAsset asset = Resources.Load("story/" + fileName) as TextAsset;
+        string str = asset.text;
+        bool removeBlankLines = true;
+        string[] str2 = str.Split('\n');
+        for (int i = 0; i < str2.Length; i++)
+            str2[i] = str2[i].Trim();
+      
+        List<string> lines = ArrayToList(str2, removeBlankLines);
+        data = lines;
 
+        //data = FileManager.LoadFile(FileManager.savPath + "Resources/story/" + fileName); 
+
+        cachedLastSpeaker = "";
+        for (int i = 0; i < data.Count; i++)
+        {
+            Debug.Log(data[i]);
+
+        }
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -151,16 +179,24 @@ public class NovelController : MonoBehaviour
         bool gatheringChoices = true;
         while (gatheringChoices)
         {
+            Debug.Log(chapterProgress);
             chapterProgress++;
             line = data[chapterProgress];
+            Debug.Log(chapterProgress);
+            Debug.Log(line);
 
-            if (line == "{")
+            if (line.Equals("{"))
+            {
+                Debug.Log("일치함");
                 continue;
+            }
 
             line = line.Replace("        ", "");
 
             if (line != "}")
             {
+                Debug.Log(chapterProgress);
+                Debug.Log(line);
                 choices.Add(line.Split('"')[1]);
                 actions.Add(data[chapterProgress + 1].Replace("        ", ""));
                 chapterProgress++;
