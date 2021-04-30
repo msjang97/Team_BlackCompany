@@ -10,6 +10,11 @@ public class StartScene : MonoBehaviour
         SceneManager.LoadScene("MainSystem");
     }
 
+    public void StartMainMenuScene() // 게임 시작
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
     public void LoadGameScene() // 게임 이어하기
     {
         SaveData.P_instance.isLoadData = true;

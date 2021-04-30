@@ -1,2 +1,2 @@
 ChapterName : Chapter0_start
-ChapterProgress : 10
+ChapterProgress : 0
