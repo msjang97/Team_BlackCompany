@@ -139,6 +139,7 @@ public class CLM : MonoBehaviour
                 }
                 else
                 {
+                    curCharacter.FadeOut(100, false);
                     DialogueSystem.instance.Say(dialogue, line.speaker, pretext != "");
                 }
 

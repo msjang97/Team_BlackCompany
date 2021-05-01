@@ -2274,6 +2274,7 @@ MonoBehaviour:
   chapterNum: 0
   isMainSceneLoaded: 0
   savedChapterProgress: 0
+  savedChapterName: 
   choices: []
   actions: []
 --- !u!4 &1018042778
