@@ -38,7 +38,7 @@ public class NovelController : MonoBehaviour
 
         if (ChoiceManager.P_instance.savedChapterName == "") //처음 시작할때만 
         {
-            _chapterName = "Chapter0_start";
+            _chapterName = "Chapter2_start";
         }
         else
         {
@@ -129,6 +129,8 @@ public class NovelController : MonoBehaviour
             chapterProgress = SaveData.P_instance.SavedChapterProgress;
             lastBackground = SaveData.P_instance.SavedBackgroundLine;
         }
+
+
 
         while (chapterProgress < data.Count)
         {
@@ -383,7 +385,15 @@ public class NovelController : MonoBehaviour
             case "Load":
                 Command_Load(data[1]);
                 break;
+            case "setGotoStartScene":
+                Command_goToStartScene();
+                break;
         }
+    }
+
+    void Command_goToStartScene()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 
     void Command_Load(string chapterName)

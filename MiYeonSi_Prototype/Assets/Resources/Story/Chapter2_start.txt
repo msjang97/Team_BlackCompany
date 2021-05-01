@@ -131,18 +131,12 @@ miniGame(Minseok_Minigame) playMusic(Evolution)
 {
    "아… 귀찮은데. 이제 그냥 가면 안 돼?" 
         최은지 "미…미안, 내가 눈치가 없었지…" setBackground(카페_1,false,1) changeExpression(최은지,최은지_당황,100)
-		사수진 "…그렇게까지 말할 필요는 없잖아. 하나만 더 보고 가던지." changeExpression(사수진,사수진_0,100)
-		최은지 "아, 아냐… 신경 쓰지 마! 오늘은 다들 여기서 헤어지자. "  changeExpression(최은지,최은지_당황,100)
    "뭐 어때, 얼마나 걸린다고. 그럼 하나만 더 보고 가자." 
         최은지 "정말? 그럼 이따 광장에서 행사 있다는데 우리도 참여하자!" setBackground(카페_1,false,1) changeExpression(최은지,최은지_0,100)
-		사수진 "…그래,  그거만 보고 가자."
    "수진아, 그러지 말고 더 놀다 가자. 나도 여기 궁금하고."
         사수진 "평소에 이런 데 관심도 없으면서… 그럼 하나만 더 보고 가던지.." setBackground(카페_1,false,1) changeExpression(사수진,사수진_0,100)
-        최은지 "야호! 그럼 우리 관상 보러 가자!" changeExpression(최은지,최은지_2,100)
    "그럼 우린 여기 잘 모르니까 은지가 가고 싶은 곳으로 가자."
         최은지 "와아, 찬우 최고! 그럼 나 관상가 보고 싶어!" setBackground(카페_1,false,1) changeExpression(최은지,최은지_4,100)
-		사수진 "엄청 편들어주네…누구는 서러워서 살겠나." changeExpression(사수진,사수진_1,100)
-		최은지 "수진이 너 질투하는구나? 음료 다 마셨으면 빨리 이동하자!" changeExpression(최은지,최은지_신나,100)
 }
 
 setMiniGameAfterBG(민속촌_1,false,1) playMusic(FolkVillage)
@@ -152,22 +146,17 @@ miniGame(Minseok_Minigame) playMusic(Evolution)
 {
    "알면 됐어. 다음부터는 이런 거 부탁하지 마." 
         최은지 "어? 미, 미안…" setBackground(민속촌_1,false,1) changeExpression(최은지,최은지_1,100)
-		사수진 "지찬우, 너 오늘 뭐가 문제냐?" changeExpression(사수진,사수진_찌릿,100)
-		최은지 "아냐, 수진아. 내가 눈치 없이 굴었어… "  changeExpression(최은지,최은지_당황,100)
    "수진이는 신경 쓰지 마. 말은 그렇게 해도 자기도 즐기는 것 같던데?" 
 		사수진 "맞아, 생각보다 재밌었어."  setBackground(민속촌_1,false,1) changeExpression(사수진,사수진_미소,100)
-		최은지 "진짜? 다행이다~ 하여간 수진이는 솔직하지 못하다니까." changeExpression(최은지,최은지_0,100)
    "나도 오늘 정말 즐거웠어. 특히 마지막에 행사는 정말 보길 잘한 것 같아. 수진이도 재밌었대."
         최은지 "정말? 나만 재밌으면 어쩌나 했는데 다행이다~"  setBackground(민속촌_1,false,1) changeExpression(최은지,최은지_2,100)
-        사수진 "진짜 바쁘면 이미 갔겠지. 오늘 생각보다 재밌었어." changeExpression(사수진,사수진_미소,100)
-		최은지 "그치, 그치?! 민속촌도 생각보다 재밌지?" changeExpression(최은지,최은지_신나,100)
    "솔직히 평소에 이런 곳 잘 안 오는 데 은지가 있어서 재밌었던 것 같아. 덕분에 잘 즐거웠어."
         최은지 "정말? 다행이다! 나도 오늘 무지 재밌었어!" setBackground(민속촌_1,false,1) changeExpression(최은지,최은지_4,100)
-		사수진 "아주 죽이 척척 맞네." changeExpression(사수진,사수진_3,100)
-		최은지 "어? 수진이 웃는다! 오늘 재밌었지?" changeExpression(최은지,최은지_0,100)
 }
 
 setMiniGameAfterBG(민속촌_1,false,1) playMusic(FolkVillage)
 최은지 "그럼 수업에서 보자! 다들 잘 들어가~" changeExpression(최은지,최은지_0,100)
 지찬우 "으,응…! 조심히 들어가…" changeExpression(지찬우,지찬우_쑥스,100)
 연애세포	"하루 만에 많이 친해졌네. 느낌 좋은데?" changeExpression(연애세포,연애세포_3,100)
+
+setGotoStartScene()
