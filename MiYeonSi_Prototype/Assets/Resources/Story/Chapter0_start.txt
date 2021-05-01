@@ -1,4 +1,4 @@
-setBackground(Room, false, 1) playMusic(happiness)
+setBackground(Room, false, 1) playMusic(Title)
 지찬우 "대학 오면 여자친구 생긴다는 말, 안 믿는 척하면서도 내심 기대했다." changeExpression(지찬우,지찬우_스탠딩,100) 
 지찬우 "그런데 오게 된 학교가 하필 공대라니.." changeExpression(지찬우,지찬우_해탈,100) 
 지찬우 "극악의 성비에 그나마 있는 여자애들도 조별 과제 때 인사한 게 전부. 외롭다는 건 뭘까?"
@@ -37,7 +37,7 @@ choice
 지찬우 "부, 부탁드립니다! 공대 아싸남이 초절정 인기남이 될 수 있게 도와주세요!" changeExpression(지찬우,지찬우_쑥쓰,100)
 연애세포 "좋아! 그럼 이따 보자고." changeExpression(연애세포,연애세포_0,100)
 
-setBackground(Room, false, 1) playMusic(happiness)
+setBackground(Room, false, 1) playMusic(Title)
 지찬우 "뭐지... 잤는데 왜 이렇게 잔 것 같지가 않냐…" changeExpression(지찬우,지찬우_0,100) 
 연애세포 "야, 오늘 학교 가는 날 아니냐?" changeExpression(연애세포,연애세포_0,100)
 지찬우 "어? 지금 몇 시… 아악!!! 누구세요!!!" changeExpression(지찬우,지찬우_경악,100) 
@@ -46,7 +46,7 @@ setBackground(Room, false, 1) playMusic(happiness)
 연애세포 "아니, 진짠데. 못 믿겠으면 뺨이라도 때려보던가. 근데 학교 안 가냐?" changeExpression(연애세포,연애세포_0,100)
 지찬우 "그러고 보니 시간이… 으아악! 망했다!!!!!!" changeExpression(지찬우,지찬우_경악,100) 
 
-setBackground(복도_1, false, 1) playMusic(happiness)
+setBackground(복도_1, false, 1) playMusic(Title)
 지찬우 "이게 무슨 일이야… 어차피 뛰어도 늦을 것 같은데 그냥 걸어갈까..." changeExpression(지찬우,지찬우_1,100) 
 안하경 "오랜만입니다, 선배." changeExpression(안하경,안하경_0,100) 
 지찬우 "하경이?! 어, 그, 그러니까 이, 이건…!" changeExpression(지찬우,지찬우_경악,100) 
