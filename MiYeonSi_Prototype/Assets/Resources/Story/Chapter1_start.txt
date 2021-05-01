@@ -1,5 +1,5 @@
-setBackground(강의실_2,false,1) playMusic(persona1)
 교수님 "저번 시간에 말했듯이 이번 프로젝트는 조별 과제입니다. 공정하게 추첨으로 조를 편성했으니 다들 PPT 화면 확인해주세요."
+setBackground(강의실_2,false,1) playMusic(persona1)
 사수진 "뭐야, 벌써 전화 몇 통을 했는데 받지도 않고… 혹시 자나?" changeExpression(사수진,사수진_1,100)
  "문이 벌컥 열리며 찬우가 들어온다."
 사수진 "지찬우, 너 휴대폰 확인 안 해? 벌써 전화 몇 통을 했는지 알아?"
@@ -37,7 +37,7 @@ setBackground(강의실_2,false,1) playMusic(persona1)
 연애세포 "밑져야 본전이라며? 일단 들이대는 거지!" changeExpression(연애세포,연애세포_0,100)
 최은지 "어… 찬우야, 무슨 생각 해?" changeExpression(최은지,최은지_0,100)
 
-miniGame(SaSuJinMiniGame) playMusic(persona1)
+miniGame(SaSuJin_MiniGame) playMusic(persona1)
 {
     "그런 거 물어볼 시간에 회의나 해."
         최은지 "….?" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_1,100)
@@ -56,7 +56,7 @@ setBackground(강의실_2,false,1) playMusic(persona1)
 사수진 "주제가 한국의 문화 체험 후 분석한 보고서 작성이라고 했나? 이런 걸 왜 조별 과제로 시키는 거야?" changeExpression(사수진,사수진_찌릿,100)
 최은지 "김 교수님이 원래 이런 거 좋아하시잖아~ 그냥 우리 친해지라고 내주셨나 봐. 성적도 잘 주신대." changeExpression(최은지,최은지_0,100)
 
-miniGame(SaSuJinMiniGame) playMusic(persona1)
+miniGame(SaSuJin_MiniGame) playMusic(persona1)
 {
     "미안한데 나 그날 아플 예정이라 참여 못 할 것 같아." 
         최은지 "우리 언제 만날지도 안 정했는데?" changeExpression(최은지,최은지_1,100)
@@ -83,7 +83,7 @@ setBackground(강의실_2,false,1) playMusic(persona1)
 지찬우 "뭐? 너무 노골적이지 않아?" changeExpression(지찬우,지찬우_깜짝,100)
 연애세포 "그러니까 핑계 대서 자연스럽게 물어보자는 거 아냐!" changeExpression(연애세포,연애세포_2,100)
 
-miniGame(SaSuJinMiniGame) playMusic(persona1)
+miniGame(SaSuJin_MiniGame) playMusic(persona1)
 {
    "아, 이거 내 번호야. 나중에 필요한 일 있으면 연락해." 
         최은지 "맞다, 깜빡할 뻔했네! 그럼 내 번호도 적어 줄게. 폰 이리 줘봐." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_4,100)
