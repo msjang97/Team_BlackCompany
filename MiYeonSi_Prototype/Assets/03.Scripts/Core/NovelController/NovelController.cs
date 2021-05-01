@@ -38,7 +38,7 @@ public class NovelController : MonoBehaviour
 
         if (ChoiceManager.P_instance.savedChapterName == "") //처음 시작할때만 
         {
-            _chapterName = "Chapter2_start";
+            _chapterName = "Chapter0_start";
         }
         else
         {
@@ -399,6 +399,7 @@ public class NovelController : MonoBehaviour
     void Command_Load(string chapterName)
     {
         NovelController.instance.LoadChapterFile(chapterName);
+        HandleLine(data[0]);
     }
 
     /*void Command_miniGameLoad(string gameName)
