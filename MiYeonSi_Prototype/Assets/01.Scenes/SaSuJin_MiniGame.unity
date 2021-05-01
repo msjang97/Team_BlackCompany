@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1776997027}
+  time_sujin: {fileID: 577143522}
 --- !u!1 &159635707
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1776997027}
+  time_sujin: {fileID: 577143522}
 --- !u!1 &182536726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1776997027}
+  time_sujin: {fileID: 577143522}
 --- !u!1 &1023485454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,6 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 1776997027}
+  time_sujin: {fileID: 577143522}
 --- !u!1 &1610001174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2591,7 +2595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776997026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -379.77844, y: -1225.2743, z: 2277.25}
+  m_LocalPosition: {x: -379.77844, y: -1225.274, z: 2277.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2113006726}

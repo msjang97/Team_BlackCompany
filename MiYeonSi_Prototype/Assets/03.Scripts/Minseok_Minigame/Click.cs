@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Click : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+{ 
     public void Click_Button()
     {
+        SelectChoice();
         this.gameObject.SetActive(false);
+    }
+
+    private void SelectChoice()
+    {                 
+        name = name.Replace("Button", "");
+        ChoiceManager.P_instance.selectedNum = int.Parse(name);      
     }
 
 }

@@ -7,6 +7,8 @@ public class Choice : MonoBehaviour
     private Animator animator;
     private Vector3 myPosition;
     public Bar bar;
+    public Timer_SuJin time_sujin;
+
 
     private bool isSelected;
     private float destroyedTime = 2.0f;
@@ -23,7 +25,14 @@ public class Choice : MonoBehaviour
         {
             SelectChoice();
             AnimationController();
-        }       
+        }
+        else if (time_sujin.TimeCost <= 0.0f )
+        {
+            if(this.name == "Choice1")
+            TimeOutSelectChoice();
+            else
+            AnimationController();
+        }
     }
 
     private void SelectChoice()
@@ -36,6 +45,15 @@ public class Choice : MonoBehaviour
             name = name.Replace("Choice", "");
             ChoiceManager.P_instance.selectedNum = int.Parse(name);
         }
+    }
+
+    private void TimeOutSelectChoice()
+    {
+        bar.gameObject.transform.position = Vector3.Lerp(transform.position, myPosition, 0.01f);
+        isSelected = true;
+        animator.SetBool("IsSelected", true);
+
+        ChoiceManager.P_instance.selectedNum = 1;
     }
 
     private void AnimationController()

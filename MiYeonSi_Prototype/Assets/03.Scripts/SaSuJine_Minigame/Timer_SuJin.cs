@@ -12,13 +12,15 @@ public class Timer_SuJin : MonoBehaviour
 
     void Update()
     {
-        if (bar.P_isStoped == false)
-            CountTime();        
+        if (bar.P_isStoped == false)       
+            CountTime();    
     }
 
     private void CountTime()
     {
         TimeCost -= Time.deltaTime;
         TimeCount.text = "" + (int)TimeCost;
+        if (TimeCost <= 0)
+            TimeCost = 0;
     }
 }

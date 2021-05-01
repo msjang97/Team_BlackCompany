@@ -25,17 +25,21 @@ public class ChangeScene_PlFive : MonoBehaviour
         {
             switch (this.gameObject.name)
             {
-                case "Button_+5":
-                    SceneManager.LoadScene("PlFive");
+                case "Button1":
+                    name = name.Replace("Button", "");
+                    ChoiceManager.P_instance.selectedNum = int.Parse(name);
+                    break;                 
+                case "Button2":
+                    name = name.Replace("Button", "");
+                    ChoiceManager.P_instance.selectedNum = int.Parse(name);
                     break;
-                case "Button_+3":
-                    SceneManager.LoadScene("PlThree");
+                case "Button3":
+                    name = name.Replace("Button", "");
+                    ChoiceManager.P_instance.selectedNum = int.Parse(name);
                     break;
-                case "Button_0":
-                    SceneManager.LoadScene("Zero");
-                    break;
-                case "Button_-5":
-                    SceneManager.LoadScene("MiFive");
+                case "Button4":
+                    name = name.Replace("Button", "");
+                    ChoiceManager.P_instance.selectedNum = int.Parse(name);
                     break;
             }
         }

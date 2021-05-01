@@ -20,8 +20,14 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            time -= Time.deltaTime;
-            currentTime = (int)time;
-            timerText.text = currentTime.ToString();
+        time -= Time.deltaTime;
+        currentTime = (int)time;
+        timerText.text = currentTime.ToString();
+
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+            ChoiceManager.P_instance.selectedNum = 1;
+        }
     }
 }
