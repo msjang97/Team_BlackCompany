@@ -42,7 +42,7 @@ public class NovelController : MonoBehaviour
         }
         else
         {
-            _chapterName = "Chapter0_start"; //추후에 챕터 바뀌는거 넣기.
+            _chapterName = "Chapter1_start"; //추후에 챕터 바뀌는거 넣기.
             isAfterMiniGame = true;
 
             //LoadChapterFile("SaSuJin_" + ChoiceManager.P_instance.P_chapterNum + ChoiceManager.P_instance.P_selectedNum);
@@ -350,7 +350,7 @@ public class NovelController : MonoBehaviour
                 Command_SetLayerImage(data[1], BCFC.instance.background);
                 lastBackground = chapterProgress;
                 SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
-                Next(); // 배경 전환되면서 같이 전환.
+                //Next(); // 배경 전환되면서 같이 전환.
                 break;
             case "setCinematic":
                 Command_SetLayerImage(data[1], BCFC.instance.cinematic);
