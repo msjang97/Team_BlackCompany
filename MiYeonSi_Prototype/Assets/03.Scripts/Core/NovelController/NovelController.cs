@@ -9,6 +9,7 @@ public class NovelController : MonoBehaviour
     public static NovelController instance;
     //private string txtFileName = null;
     private bool isAfterMiniGame = false;
+    [HideInInspector] public int lastBackground;
     string _chapterName;
 
     public bool next_box;
@@ -57,6 +58,7 @@ public class NovelController : MonoBehaviour
         {
             Next();
             next_box = false;
+            SaveData.P_instance.SaveGame(_chapterName, chapterProgress, chapterProgress);
         }
 
     }
@@ -118,6 +120,13 @@ public class NovelController : MonoBehaviour
         {
             SaveData.P_instance.isLoadData = false;
             chapterProgress = SaveData.P_instance.SavedChapterProgress;
+            lastBackground = SaveData.P_instance.SavedBackgroundLine;
+
+            if (chapterProgress != lastBackground)
+            {
+                HandleLine(data[lastBackground]);
+                _next = false;
+            }
         }
 
         while (chapterProgress < data.Count)
@@ -339,7 +348,8 @@ public class NovelController : MonoBehaviour
                 break;
             case "setBackground":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
-                SaveData.P_instance.SaveGame(_chapterName, chapterProgress);
+                lastBackground = chapterProgress;
+                SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
                 Next(); // 배경 전환되면서 같이 전환.
                 break;
             case "setCinematic":

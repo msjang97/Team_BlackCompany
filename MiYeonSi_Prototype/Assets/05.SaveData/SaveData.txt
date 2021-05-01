@@ -1,2 +1,3 @@
 ChapterName : Chapter0_start
-ChapterProgress : 0
+ChapterProgress : 3
+SavedBackgroundLine : 0

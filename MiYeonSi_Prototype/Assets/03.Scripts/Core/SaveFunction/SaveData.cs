@@ -31,6 +31,13 @@ public class SaveData : MonoBehaviour
         set { _savedChapterProgress = value; }
     }
 
+    private int _savedBackgroundLine;
+    public int SavedBackgroundLine
+    {
+        get { return _savedBackgroundLine; }
+        set { _savedBackgroundLine = value; }
+    }
+
     private bool _isLoadData;
     public bool isLoadData
     {
@@ -58,7 +65,7 @@ public class SaveData : MonoBehaviour
         FileInfo dataFile = new FileInfo(dataPath);
         if (!dataFile.Exists)
         {
-            SaveGame("Chapter0_start", 0);
+            SaveGame("Chapter0_start", 0, 0);
         }
 
         _chapterName = "";
@@ -67,8 +74,7 @@ public class SaveData : MonoBehaviour
     }
 
 
-    // 매 턴마다 저장하므로 좀 비효율적임.
-    public void SaveGame(string chapterName, int chapterProgress)
+    public void SaveGame(string chapterName, int chapterProgress, int backgroundLine)
     {
         _chapterName = chapterName;
         _savedChapterProgress = chapterProgress;
@@ -79,6 +85,7 @@ public class SaveData : MonoBehaviour
         TextWriter tw = new StreamWriter(fs);
         tw.Write("ChapterName : " + _chapterName + "\n");
         tw.Write("ChapterProgress : " + _savedChapterProgress + "\n");
+        tw.Write("SavedBackgroundLine : " + _savedBackgroundLine + "\n");
         tw.Close();
         fs.Close();
 
@@ -104,6 +111,11 @@ public class SaveData : MonoBehaviour
                 {
                     data = loadData[i].Split(' ', '\n');
                     _savedChapterProgress = int.Parse(data[2]);
+                }
+                else if (loadData[i].StartsWith("SavedBackgroundLine : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    _savedBackgroundLine = int.Parse(data[2]);
                 }
             }
 
