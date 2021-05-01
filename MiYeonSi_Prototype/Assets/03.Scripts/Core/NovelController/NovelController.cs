@@ -159,6 +159,8 @@ public class NovelController : MonoBehaviour
                 else if (line.StartsWith("miniGame"))
                 {
                     ChoiceManager.P_instance.savedChapterName = _chapterName;
+                    ChoiceManager.P_instance.selectedNum = 0;
+                    ChoiceManager.P_instance.isMainSceneLoaded = false;
                     string[] miniGameName = null;
                     miniGameName = line.Split('(', ')');
                     yield return HandlingChoiceLine(line, miniGameName[1]); //여기서 미니게임 이름 넘겨주기. 
