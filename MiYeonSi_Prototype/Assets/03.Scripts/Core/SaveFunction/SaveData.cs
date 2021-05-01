@@ -78,6 +78,7 @@ public class SaveData : MonoBehaviour
     {
         _chapterName = chapterName;
         _savedChapterProgress = chapterProgress;
+        _savedBackgroundLine = backgroundLine;
 
         FileInfo dataFile = new FileInfo(dataPath);
 
@@ -89,6 +90,7 @@ public class SaveData : MonoBehaviour
         tw.Close();
         fs.Close();
 
+        Debug.Log(_chapterName + ", !!! line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine);
         // 추가 작성
         // File.AppendAllText(Application.dataPath + "/SaveData.txt", "  !@#추가 내용");
     }
@@ -119,7 +121,7 @@ public class SaveData : MonoBehaviour
                 }
             }
 
-            Debug.Log(_chapterName + ", line : " + _savedChapterProgress);
+            Debug.Log(_chapterName + ", line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine);
         }
         else
         {

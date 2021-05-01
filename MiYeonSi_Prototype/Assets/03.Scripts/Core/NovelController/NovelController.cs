@@ -56,7 +56,7 @@ public class NovelController : MonoBehaviour
         {
             Next();
             next_box = false;
-            SaveData.P_instance.SaveGame(_chapterName, chapterProgress, chapterProgress);
+            SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
         }
 
     }
@@ -87,18 +87,18 @@ public class NovelController : MonoBehaviour
         string[] str2 = str.Split('\n');
         for (int i = 0; i < str2.Length; i++)
             str2[i] = str2[i].Trim();
-      
+
         List<string> lines = ArrayToList(str2, removeBlankLines);
         data = lines;
 
         //data = FileManager.LoadFile(FileManager.savPath + "Resources/story/" + fileName); 
 
         cachedLastSpeaker = "";
-        for (int i = 0; i < data.Count; i++)
-        {
-            Debug.Log(data[i]);
+        //for (int i = 0; i < data.Count; i++)
+        //{
+        //    Debug.Log(data[i]);
 
-        }
+        //}
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -120,14 +120,14 @@ public class NovelController : MonoBehaviour
         if (SaveData.P_instance.isLoadData == true)
         {
             SaveData.P_instance.isLoadData = false;
-            chapterProgress = SaveData.P_instance.SavedChapterProgress;
             lastBackground = SaveData.P_instance.SavedBackgroundLine;
 
-            if (chapterProgress != lastBackground)
-            {
-                HandleLine(data[lastBackground]);
-                _next = false;
-            }
+            HandleLine(data[lastBackground]);
+            _next = false;
+
+            // 순서를 위로 올리면, 로드 할 때 chapterProgress가 lastBackground가 되어 저장됨.
+            chapterProgress = SaveData.P_instance.SavedChapterProgress;
+            lastBackground = SaveData.P_instance.SavedBackgroundLine;
         }
 
         while (chapterProgress < data.Count)
@@ -135,17 +135,17 @@ public class NovelController : MonoBehaviour
             //we need a way of knowing when the player wants to advance. We nees d "next" trigger.Not just a keypress. But something that can be triggerd.
             //by a click or a keypress
             if (_next)
-            {                
+            {
                 if (isAfterMiniGame == true) //미니게임 이후일 경우, 저장된 진행상황만큼 이동.
-                {                    
-                    HandleLine(ChoiceManager.P_instance.actions[ChoiceManager.P_instance.selectedNum-1] ); //선택지에 대한 대답 출력.
+                {
+                    HandleLine(ChoiceManager.P_instance.actions[ChoiceManager.P_instance.selectedNum - 1]); //선택지에 대한 대답 출력.
                     while (isHandlingLine)
                         yield return new WaitForEndOfFrame();
                     chapterProgress = ChoiceManager.P_instance.savedChapterProgress;
                     isAfterMiniGame = false;
                     continue;
                 }
-                    
+
                 string line = data[chapterProgress];
 
                 //this is a choice
@@ -156,7 +156,7 @@ public class NovelController : MonoBehaviour
                 }
 
                 //this is a Choice MiniGame
-                else if(line.StartsWith("miniGame"))
+                else if (line.StartsWith("miniGame"))
                 {
                     ChoiceManager.P_instance.savedChapterName = _chapterName;
                     string[] miniGameName = null;
@@ -218,7 +218,7 @@ public class NovelController : MonoBehaviour
             }
         }
 
-        ChoiceManager.P_instance.savedChapterProgress = chapterProgress+1; //싱글턴에 진행상황 저장하고 다른씬으로 넘어가기
+        ChoiceManager.P_instance.savedChapterProgress = chapterProgress + 1; //싱글턴에 진행상황 저장하고 다른씬으로 넘어가기
 
         //display choices
         if (choices.Count > 0 && miniGameName == null)
@@ -351,11 +351,11 @@ public class NovelController : MonoBehaviour
             case "setBackground":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
                 lastBackground = chapterProgress;
-                SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
                 Next(); // 배경 전환되면서 같이 전환.
                 break;
             case "setMiniGameAfterBG":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
+                lastBackground = chapterProgress;
                 break;
             case "setCinematic":
                 Command_SetLayerImage(data[1], BCFC.instance.cinematic);
