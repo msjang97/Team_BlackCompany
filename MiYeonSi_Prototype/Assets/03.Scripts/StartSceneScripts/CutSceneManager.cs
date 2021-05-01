@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CutSceneManager : MonoBehaviour
 {
-    private float animationPlayTime = 4.0f;
+    private float animationPlayTime = 1.0f;
     private int i = 0;
 
     public GameObject[] CutScenes;

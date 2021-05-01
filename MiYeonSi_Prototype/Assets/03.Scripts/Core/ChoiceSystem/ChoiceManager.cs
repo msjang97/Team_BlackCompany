@@ -9,6 +9,7 @@ public class ChoiceManager : MonoBehaviour
     [HideInInspector] public int chapterNum = 0;
     [HideInInspector] public bool isMainSceneLoaded = false;
     [HideInInspector] public int savedChapterProgress;
+    [HideInInspector] public string savedChapterName;
 
     public List<string> choices = new List<string>();
     public List<string> actions = new List<string>();
@@ -38,6 +39,8 @@ public class ChoiceManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        savedChapterName = "";
     }
 
     void Update()
@@ -46,7 +49,7 @@ public class ChoiceManager : MonoBehaviour
         {
             StartCoroutine("LoadMainScene");
             isMainSceneLoaded = true;  
-        }         
+        }
     }
 
     IEnumerator LoadMainScene()

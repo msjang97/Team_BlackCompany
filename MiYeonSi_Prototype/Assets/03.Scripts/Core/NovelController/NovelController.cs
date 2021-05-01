@@ -36,17 +36,15 @@ public class NovelController : MonoBehaviour
             return;
         }
 
-        if (ChoiceManager.P_instance.savedChapterProgress == 0) //처음 시작할때만 
+        if (ChoiceManager.P_instance.savedChapterName == "") //처음 시작할때만 
         {
             _chapterName = "Chapter0_start";
         }
         else
         {
-            _chapterName = "Chapter1_start"; //추후에 챕터 바뀌는거 넣기.
-            isAfterMiniGame = true;
+            _chapterName = ChoiceManager.P_instance.savedChapterName;
 
-            //LoadChapterFile("SaSuJin_" + ChoiceManager.P_instance.P_chapterNum + ChoiceManager.P_instance.P_selectedNum);
-            //ChoiceManager.P_instance.P_selectedNum = null;
+            isAfterMiniGame = true;
         }
 
         LoadChapterFile(_chapterName);
@@ -105,6 +103,9 @@ public class NovelController : MonoBehaviour
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
 
+        _chapterName = fileName;
+        SaveData.P_instance.ChapterName = _chapterName;
+
         Next();
     }
 
@@ -157,6 +158,7 @@ public class NovelController : MonoBehaviour
                 //this is a Choice MiniGame
                 else if(line.StartsWith("miniGame"))
                 {
+                    ChoiceManager.P_instance.savedChapterName = _chapterName;
                     string[] miniGameName = null;
                     miniGameName = line.Split('(', ')');
                     yield return HandlingChoiceLine(line, miniGameName[1]); //여기서 미니게임 이름 넘겨주기. 
@@ -350,7 +352,10 @@ public class NovelController : MonoBehaviour
                 Command_SetLayerImage(data[1], BCFC.instance.background);
                 lastBackground = chapterProgress;
                 SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
-                //Next(); // 배경 전환되면서 같이 전환.
+                Next(); // 배경 전환되면서 같이 전환.
+                break;
+            case "setMiniGameAfterBG":
+                Command_SetLayerImage(data[1], BCFC.instance.background);
                 break;
             case "setCinematic":
                 Command_SetLayerImage(data[1], BCFC.instance.cinematic);

@@ -18,7 +18,7 @@ choice
         사수진 "알면 잘하던지. 나 말고 너 챙겨 주는 사람 누가 있냐?" setBackground(Room,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setBackground(강의실_2,false,1) playMusic(persona1)
+setMiniGameAfterBG(강의실_2,false,1) playMusic(persona1)
 연애세포 "잘생겼네? 누구야?" changeExpression(연애세포,연애세포_4,100)
 지찬우 "사수진. 고등학교 동창인데 공부도 잘하고 얼굴도 잘생겨서 예전부터 내 주위 여자애들은 전부 쟤 좋아했어…" changeExpression(지찬우,지찬우_해탈,100)
 지찬우 "나 이 일 관련해서 트라우마 있으니까 이 얘긴 그만하자…" changeExpression(지찬우,지찬우_해탈,100)
@@ -49,7 +49,7 @@ miniGame(SaSuJin_MiniGame) playMusic(persona1)
         최은지 "정리? 찬우는 엄청 꼼꼼한 성격이구나. 팀원으로서 든든한데?" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setBackground(강의실_2,false,1) playMusic(persona1)
+setMiniGameAfterBG(강의실_2,false,1) playMusic(persona1)
 사수진 "조장은 내가 할게. 다들 괜찮지?" changeExpression(사수진,사수진_0,100)
 최은지 "아무도 안 하면 내가 하려고 했는데 수진이랑 같은 조라서 다행이다. 그래, 잘해보자." changeExpression(최은지,최은지_0,100)
 사수진 "예전부터 이런 건 전부 내가 해서 차라리 이쪽이 마음이 편해." changeExpression(사수진,사수진_0,100)
@@ -62,7 +62,7 @@ miniGame(SaSuJin_MiniGame) playMusic(persona1)
         최은지 "우리 언제 만날지도 안 정했는데?" changeExpression(최은지,최은지_1,100)
         사수진 "민속촌이나 가자. 제일 무난하니까" changeExpression(사수진,사수진_0,100)
    "귀찮은데 그냥 대충하면 안돼?" 
-        최은지 "에이~ 수진이 이번에 장학금 받아야 한대, 좀 봐주라!"setBackground(강의실_2,false,1)  changeExpression(최은지,최은지_0,100)
+        최은지 "에이~ 수진이 이번에 장학금 받아야 한대, 좀 봐주라!" setBackground(강의실_2,false,1)  changeExpression(최은지,최은지_0,100)
         사수진 "이번 학기 성적 잘 받아야 한다고 한 건 너면서? 민속촌이나 가자" changeExpression(사수진,사수진_0,100)
    "혹시 생각나는 거 있어? 뭐 하면 좋을까?" 
         최은지 "민속촌 탐방은 어때? 보고서 쓰기에도 괜찮을 것 같은데. ?" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_0,100)
@@ -72,7 +72,7 @@ miniGame(SaSuJin_MiniGame) playMusic(persona1)
         사수진 "괜찮네, 그럼 그걸로 하자. " changeExpression(사수진,사수진_0,100)
 }
 
-setBackground(강의실_2,false,1) playMusic(persona1)
+setMiniGameAfterBG(강의실_2,false,1) playMusic(persona1)
 사수진 "그럼 이번 주 시간 언제 돼? 난 평일은 목요일밖에 시간이 안 될 것 같은데." changeExpression(사수진,사수진_0,100)
 최은지 "그래? 그럼 차라리 주말에 만날까?" changeExpression(최은지,최은지_0,100)
 최은지 "보고서 작성은 다음 주부터라고 했으니까 작성할 시간은 있어. 찬우는 어때?" 
