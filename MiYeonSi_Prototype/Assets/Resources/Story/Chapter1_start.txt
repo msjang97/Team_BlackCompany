@@ -122,11 +122,11 @@ setMiniGameAfterBG(강의실_2,false,1)
 지찬우 "응?" changeExpression(지찬우,지찬우_해탈,100)
 사수진 "아냐, 오늘은 나 볼 일이 있어서 같이 못 가겠다, 내일 봐." changeExpression(사수진,사수진_0,100)
 지찬우 "어? 그, 그래... 내일 보자…" changeExpression(지찬우,지찬우_깜짝,100)
-연애세포 "뭐냐, 쟤? 원래 좀 재수 없는 타입이냐? changeExpression(연애세포,연애세포_4,100)
+연애세포 "뭐냐, 쟤? 원래 좀 재수 없는 타입이냐?" changeExpression(연애세포,연애세포_4,100)
 지찬우 "수, 수진이? 아냐, 수진이 말은 저렇게 해도 예전부터 나 엄청 잘 챙겨 줬어." changeExpression(지찬우,지찬우_쭈글,100)
 지찬우 "아마 오늘도 저렇게 말하고 나중에 도와주지 않을까? 그러면 좋겠다…." changeExpression(지찬우,지찬우_쭈글,100)
-연애세포 "한심하긴, 연애에서 남이 도와주는 게 말이 되냐? 으이구… changeExpression(연애세포,연애세포_0,100)
-
+연애세포 "한심하긴, 연애에서 남이 도와주는 게 말이 되냐? 으이구…" changeExpression(연애세포,연애세포_0,100)
+Load(Chapter2_start)
 
 
 
