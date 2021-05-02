@@ -398,11 +398,13 @@ public class NovelController : MonoBehaviour
     void Command_goToStartScene2()
     {
         touch_box.SetActive(false);
+        AudioManager.instance.StopSong();
         Invoke("Go_start",1.5f);
     }
 
     void Command_goToStartScene()
     {
+        AudioManager.instance.StopSong();
         Go_start();
     }
 

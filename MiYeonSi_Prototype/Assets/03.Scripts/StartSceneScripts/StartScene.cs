@@ -24,7 +24,7 @@ public class StartScene : MonoBehaviour
 
     public void QuitApplication() //게임 종료
     {
-        AudioManager.instance.StopSong();
+        //AudioManager.instance.StopSong();
         Application.Quit();
     }
     

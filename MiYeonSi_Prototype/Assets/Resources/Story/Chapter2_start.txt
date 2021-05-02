@@ -1,6 +1,6 @@
 연애세포 "뭐야, 벌써 나가? 약속까지 시간 좀 남았는데?" changeExpression(연애세포,연애세포_0,100)
 setBackground(Room,false,1) playMusic(Sunny)
-지찬우 "그렇긴 한데, 중고 판매 사이트에서 표를 싸게 팔길래 미리 만나서 사가기로 했거든. 다른 애들 것도 내가 구해주기로 했어." changeExpression(지찬우,지찬우_0,100)
+지찬우 "그렇긴 한데, 중고 판매 사이트에서 표를 싸게 팔길래 미리 만나서 사가기로 했거든.다른 애들 것도 내가 구해주기로 했어." changeExpression(지찬우,지찬우_0,100)
 연애세포 "아~ 어제 채팅하던 게 그거야? 너 완전 둔탱인줄 알았는데 꽤 생활력이 있구나." changeExpression(연애세포,연애세포_3,100)
 지찬우 "대학생이 돈이 어디 있어… 자취하는데 한 푼이라도 아껴야 살지." changeExpression(지찬우,지찬우_해탈,100)
 연애세포 "잘했어, 은지도 좋아하겠네." changeExpression(연애세포,연애세포_3,100)
@@ -84,7 +84,7 @@ miniGame(Minseok_Minigame) playMusic(Evolution)
    "굳이 남의 집 벨을 누르고 튄다니, 애초에 이런 걸 하면서 얻는 게 뭐지?" 
         최은지 "무슨 불만이 그렇게 많아~ 그냥 재미로 하는 거지, 뭐! " setBackground(민속촌_2,false,1) changeExpression(최은지,최은지_0,100)
    "더는 못해! 이게 최선이야! "
-        최은지찬우야, 뒤에! " setBackground(민속촌_2,false,1) changeExpression(최은지,최은지_1,100)
+        최은지 "찬우야, 뒤에! " setBackground(민속촌_2,false,1) changeExpression(최은지,최은지_1,100)
    "은지야, 너 너무 빨라. 같이 가!"
         최은지 "하하, 찬우 네가 느린 거 아냐?" setBackground(민속촌_2,false,1) changeExpression(최은지,최은지_3,100)
 }

@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 217691976}
   - component: {fileID: 217691975}
   - component: {fileID: 217691979}
+  - component: {fileID: 217691980}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -632,6 +633,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c478a4781c1f6014e9ddc4a89f012ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &217691980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217691974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f364f341aedd284439cb59fa458521b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &236378817
@@ -2464,6 +2477,7 @@ GameObject:
   - component: {fileID: 1596354532}
   - component: {fileID: 1596354531}
   - component: {fileID: 1596354530}
+  - component: {fileID: 1596354533}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: Untagged
@@ -2534,7 +2548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1596354533}
         m_MethodName: QuitApplication
         m_Mode: 1
         m_Arguments:
@@ -2581,6 +2595,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596354528}
   m_CullTransparentMesh: 0
+--- !u!114 &1596354533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596354528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa30cde5a52ab24995bca7073863ba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633584258
 GameObject:
   m_ObjectHideFlags: 0
