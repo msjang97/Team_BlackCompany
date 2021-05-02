@@ -12,6 +12,7 @@ public class StartScene : MonoBehaviour
 
     public void StartMainMenuScene() // 게임 시작
     {
+        AudioManager.instance.StopSong();
         SceneManager.LoadScene("StartScene");
     }
 
@@ -23,6 +24,7 @@ public class StartScene : MonoBehaviour
 
     public void QuitApplication() //게임 종료
     {
+        AudioManager.instance.StopSong();
         Application.Quit();
     }
     

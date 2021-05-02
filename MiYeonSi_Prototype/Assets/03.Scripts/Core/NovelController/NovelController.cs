@@ -11,9 +11,10 @@ public class NovelController : MonoBehaviour
     private bool isAfterMiniGame = false;
     [HideInInspector] public int lastBackground;
     string _chapterName;
-
+    public float time;
     public bool next_box;
 
+    public GameObject touch_box;
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
     List<string> data = new List<string>();
     /// <summary> The progress in the current data list. /// </summary>
@@ -58,7 +59,7 @@ public class NovelController : MonoBehaviour
             next_box = false;
             SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
         }
-
+        
     }
 
     bool _next = false;
@@ -94,11 +95,7 @@ public class NovelController : MonoBehaviour
         //data = FileManager.LoadFile(FileManager.savPath + "Resources/story/" + fileName); 
 
         cachedLastSpeaker = "";
-        //for (int i = 0; i < data.Count; i++)
-        //{
-        //    Debug.Log(data[i]);
-
-        //}
+        
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -336,7 +333,6 @@ public class NovelController : MonoBehaviour
         handlingLine = null;
     }
 
-
     //ACTIONS
     // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void HandleAction(string action)
@@ -388,12 +384,26 @@ public class NovelController : MonoBehaviour
             case "setGotoStartScene":
                 Command_goToStartScene();
                 break;
+            case "setGotoStartScene2":
+                Command_goToStartScene2();
+                break;
+
         }
+    }
+    void Go_start()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    void Command_goToStartScene2()
+    {
+        touch_box.SetActive(false);
+        Invoke("Go_start",1.5f);
     }
 
     void Command_goToStartScene()
     {
-        SceneManager.LoadScene("StartScene");
+        Go_start();
     }
 
     void Command_Load(string chapterName)

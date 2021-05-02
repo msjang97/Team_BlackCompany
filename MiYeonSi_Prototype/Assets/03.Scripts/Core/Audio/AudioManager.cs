@@ -36,6 +36,16 @@ public class AudioManager : MonoBehaviour
         Destroy(source.gameObject, effect.length);
     }
 
+    public void StopSong()
+    {
+        for (int i = 0; i < allSongs.Count; i++)
+        {
+            SONG a = allSongs[i];
+            a.Stop();
+        }  
+    }
+
+
     public void PlaySong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0f, bool PlayOnStart = true, bool loop = true)
     {
         if (song != null)

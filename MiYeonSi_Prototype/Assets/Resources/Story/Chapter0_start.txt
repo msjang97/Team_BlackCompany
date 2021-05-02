@@ -21,7 +21,7 @@ setBackground(Room, false, 1) playMusic(Title)
 choice
 {
     "입은 삐뚤어져도 말은 바로 하라고 했습니다. "
-         "그렇게 지찬우는 평생 모솔로 살았다고 한다…" 
+         "그렇게 지찬우는 평생 모솔로 살았다고 한다…"setGotoStartScene2() 
     "네? 방금 제가 뭐라고 했나요?"
         지찬우 "뭐야, 멋대로 말이?!" setBackground(Room, false, 1) changeExpression(지찬우,지찬우_당황,100)
 }
