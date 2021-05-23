@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public float songTransitionSpeed = 2f;
     public bool songSmoothTransitions = true;
 
+    public float SFX_volume;
 
     public void Awake()
     {
@@ -24,16 +25,34 @@ public class AudioManager : MonoBehaviour
         {
             DestroyImmediate(gameObject);
         }
+        SFX_volume = 0.5f;
     }
 
-    public void PlaySFX(AudioClip effect, float volume = 1f, float pitch = 1f)
+    public void PlaySFX(AudioClip effect, float pitch = 1f)
     {
         AudioSource source = CreateNewSource(string.Format("SFX [{0}]", effect.name));
+        source.volume = SFX_volume;
         source.clip = effect;
         source.pitch = pitch;
         source.Play();
 
         Destroy(source.gameObject, effect.length);
+    }
+
+    public void PlayButtonSound()
+    {
+        AudioClip clip = Resources.Load("Audio/SFX/test") as AudioClip;
+        PlaySFX(clip);
+    }
+
+    public void SetSongVolume(float myVolume) //배경음 볼륨 조절.
+    {
+         activeSong.volume = myVolume;
+    }
+
+    public void SetSFXVolume(float myVolume) //효과음 볼륨 조절.
+    {
+        SFX_volume = myVolume;
     }
 
     public void StopSong()
@@ -43,8 +62,7 @@ public class AudioManager : MonoBehaviour
             SONG a = allSongs[i];
             a.Stop();
         }  
-    }
-
+    }    
 
     public void PlaySong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0f, bool PlayOnStart = true, bool loop = true)
     {
@@ -167,7 +185,7 @@ public class AudioManager : MonoBehaviour
         {
             AudioManager.allSongs.Remove(this);
             DestroyImmediate(source.gameObject);
-        }
+        }       
 
     }
 

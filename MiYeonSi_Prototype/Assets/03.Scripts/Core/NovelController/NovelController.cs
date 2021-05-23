@@ -387,6 +387,9 @@ public class NovelController : MonoBehaviour
             case "setGotoStartScene2":
                 Command_goToStartScene2();
                 break;
+            case "removeForeground":
+                Command_removeForeground(data[1]);
+                break;
 
         }
     }
@@ -414,10 +417,13 @@ public class NovelController : MonoBehaviour
         HandleLine(data[0]);
     }
 
-    /*void Command_miniGameLoad(string gameName)
+    void Command_removeForeground(string data)
     {
-        SceneManager.LoadScene(gameName);
-    }*/
+        string texName = data;
+        Texture2D tex = texName == "null" ? null : Resources.Load("Images/UI/Backdrops/" + texName) as Texture2D;
+        BCFC.instance.foreground.RemoveActiveImage(tex);
+        Next();
+    }
 
     void Command_SetLayerImage(string data, BCFC.LAYER layer)
     {
@@ -444,6 +450,7 @@ public class NovelController : MonoBehaviour
             }
         }
         layer.TransitionToTexture(tex, spd, smooth);
+
     }
 
     void Command_PlaySound(string data)

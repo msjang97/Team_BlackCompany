@@ -54,6 +54,7 @@ public class GlobalF : MonoBehaviour
         {
             RawImage image = allImages[i];
 
+
             if (image == activImage)
             {
                 if (image.color.a < 1)
@@ -82,8 +83,6 @@ public class GlobalF : MonoBehaviour
 
         return anyValueChanged;
     }
-
-
 
     public static Color SetAlpha(Color color, float alpha)
     {

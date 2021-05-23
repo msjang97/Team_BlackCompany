@@ -27,12 +27,12 @@ public class BCFC : MonoBehaviour
         public void SetTexture(Texture texture)
         {
             if (texture != null)
-            {              
+            {
                 if (activeImage == null)
                     CreateNewActiveImage();
 
                 activeImage.texture = texture;
-                activeImage.color = GlobalF.SetAlpha(activeImage.color, 1f); 
+                activeImage.color = GlobalF.SetAlpha(activeImage.color, 1f);
             }
             else
             {
@@ -101,6 +101,38 @@ public class BCFC : MonoBehaviour
             RawImage raw = ob.GetComponent<RawImage>();
             activeImage = raw;
             allImages.Add(raw);
+        }
+
+        void StopRemoving()
+        {
+            if (isRemoving)
+                BCFC.instance.StopCoroutine(removing);
+
+            removing = null;
+        }
+
+        public bool isRemoving { get { return removing != null; } }
+        Coroutine removing = null;
+        IEnumerator Removing(float speed = 0.01f, bool smooth = false)
+        {
+            while (activeImage.color.a > 0)
+            {
+                activeImage.color = GlobalF.SetAlpha(activeImage.color, smooth ? Mathf.Lerp(activeImage.color.a, 0f, speed) : Mathf.MoveTowards(activeImage.color.a, 0f, speed));
+                yield return new WaitForEndOfFrame();
+            }
+
+            allImages.Remove(activeImage);
+            GameObject.DestroyImmediate(activeImage.gameObject);
+            activeImage = null;
+            StopRemoving();
+        }
+
+        public void RemoveActiveImage(Texture texture)
+        {
+            if (activeImage == null && activeImage.texture != texture)
+                return;
+            StopRemoving();
+            removing = BCFC.instance.StartCoroutine(Removing());
         }
     }
 }
