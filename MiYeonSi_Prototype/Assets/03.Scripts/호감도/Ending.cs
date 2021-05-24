@@ -16,10 +16,10 @@ public class Ending : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Enji_Ending_point = LovePoint.instance.Enji_LovePoint;
-        Sujin_Ending_point = LovePoint.instance.Sujin_LovePoint;
-        Minseok_Ending_point = LovePoint.instance.Minseok_LovePoint;
-        Hagyoung_Ending_point = LovePoint.instance.Hagyoung_LovePoint;
+        Enji_Ending_point = LovePoint.instance.enji_LovePoint;
+        Sujin_Ending_point = LovePoint.instance.sujin_LovePoint;
+        Minseok_Ending_point = LovePoint.instance.minseok_LovePoint;
+        Hagyoung_Ending_point = LovePoint.instance.hagyoung_LovePoint;
     }
 
     // Update is called once per frame

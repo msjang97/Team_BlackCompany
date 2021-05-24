@@ -13,6 +13,7 @@ public class NovelController : MonoBehaviour
     string _chapterName;
     public float time;
     public bool next_box;
+    public int ch_count; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
 
     public GameObject touch_box;
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
@@ -22,6 +23,7 @@ public class NovelController : MonoBehaviour
     void Awake()
     {
         instance = this;
+        ch_count = 0;
     }
 
     // Start is called before the first frame update
@@ -413,6 +415,7 @@ public class NovelController : MonoBehaviour
 
     void Command_Load(string chapterName)
     {
+        ch_count++;
         NovelController.instance.LoadChapterFile(chapterName);
         HandleLine(data[0]);
     }

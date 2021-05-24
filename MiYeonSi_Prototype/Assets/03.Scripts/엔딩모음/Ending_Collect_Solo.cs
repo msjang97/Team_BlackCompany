@@ -19,7 +19,7 @@ public class Ending_Collect_Solo : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if (LovePoint.instance.Solo_end == true) //솔로 엔딩을 봤다면
+        if (LovePoint.instance.solo_end == true) //솔로 엔딩을 봤다면
         {
             Solo_Button.image.sprite = Changing_Soio;
         }
@@ -27,7 +27,7 @@ public class Ending_Collect_Solo : MonoBehaviour
 
     public void GotoEnding()
     {
-        if (LovePoint.instance.Solo_end == true)
+        if (LovePoint.instance.solo_end == true)
         {
             SceneManager.LoadScene("Solo_End");
         }

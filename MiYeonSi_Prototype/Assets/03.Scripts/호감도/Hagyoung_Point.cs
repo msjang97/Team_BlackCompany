@@ -24,25 +24,25 @@ public class Hagyoung_Point : MonoBehaviour
 
     public void Point_Plus_Five()
     {
-        LovePoint.instance.Hagyoung_LovePoint += 5;
+        LovePoint.instance.hagyoung_LovePoint += 5;
         SceneManager.LoadScene("Scene3");
     }
 
     public void Point_Plus_Three()
     {
-        LovePoint.instance.Hagyoung_LovePoint += 3;
+        LovePoint.instance.hagyoung_LovePoint += 3;
         SceneManager.LoadScene("Scene3");
     }
 
     public void Point_Zero()
     {
-        LovePoint.instance.Hagyoung_LovePoint += 0;
+        LovePoint.instance.hagyoung_LovePoint += 0;
         SceneManager.LoadScene("Scene3");
     }
 
     public void Point_Minus_Five()
     {
-        LovePoint.instance.Hagyoung_LovePoint -= 5;
+        LovePoint.instance.hagyoung_LovePoint -= 5;
         SceneManager.LoadScene("Scene3");
     }
 }

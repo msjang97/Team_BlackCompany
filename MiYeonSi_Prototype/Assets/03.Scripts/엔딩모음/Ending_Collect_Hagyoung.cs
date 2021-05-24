@@ -17,7 +17,7 @@ public class Ending_Collect_Hagyoung : MonoBehaviour
 
     void Update()
     {
-        if (LovePoint.instance.Hagyong_end == true) //하경 엔딩을 봤다면
+        if (LovePoint.instance.hagyong_end == true) //하경 엔딩을 봤다면
         {
             Hagyoung_Button.image.sprite = Changing_Hagyuong;
         }
@@ -25,7 +25,7 @@ public class Ending_Collect_Hagyoung : MonoBehaviour
 
     public void GotoEnding()
     {
-        if (LovePoint.instance.Hagyong_end == true)
+        if (LovePoint.instance.hagyong_end == true)
         {
             SceneManager.LoadScene("Hagyoung_End");
         }

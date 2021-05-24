@@ -25,25 +25,25 @@ public class Minseok_Point : MonoBehaviour
 
     public void Point_Plus_Five()
     {
-        LovePoint.instance.Minseok_LovePoint += 5;  
+        LovePoint.instance.minseok_LovePoint += 5;  
         SceneManager.LoadScene("Scene2");
     }
 
     public void Point_Plus_Three()
     {
-        LovePoint.instance.Minseok_LovePoint += 3;
+        LovePoint.instance.minseok_LovePoint += 3;
         SceneManager.LoadScene("Scene2"); 
     }
 
     public void Point_Zero()
     {
-        LovePoint.instance.Minseok_LovePoint += 0;
+        LovePoint.instance.minseok_LovePoint += 0;
         SceneManager.LoadScene("Scene2");
     }
 
     public void Point_Minus_Five()
     {
-        LovePoint.instance.Minseok_LovePoint -= 5;
+        LovePoint.instance.minseok_LovePoint -= 5;
         SceneManager.LoadScene("Scene2");
     }
 }

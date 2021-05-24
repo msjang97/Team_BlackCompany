@@ -24,25 +24,25 @@ public class Sujin_Point : MonoBehaviour
 
     public void Point_Plus_Five()
     {
-        LovePoint.instance.Sujin_LovePoint += 5;
+        LovePoint.instance.sujin_LovePoint += 5;
         SceneManager.LoadScene("Loading_Scene");
     }
 
     public void Point_Plus_Three()
     {
-        LovePoint.instance.Sujin_LovePoint += 3;
+        LovePoint.instance.sujin_LovePoint += 3;
         SceneManager.LoadScene("Loading_Scene");
     }
 
     public void Point_Zero()
     {
-        LovePoint.instance.Sujin_LovePoint += 0;
+        LovePoint.instance.sujin_LovePoint += 0;
         SceneManager.LoadScene("Loading_Scene");
     }
 
     public void Point_Minus_Five()
     {
-        LovePoint.instance.Sujin_LovePoint -= 5;
+        LovePoint.instance.sujin_LovePoint -= 5;
         SceneManager.LoadScene("Loading_Scene");
     }
 }

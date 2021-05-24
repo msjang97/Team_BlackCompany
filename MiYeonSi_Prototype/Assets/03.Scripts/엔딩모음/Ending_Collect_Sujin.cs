@@ -17,7 +17,7 @@ public class Ending_Collect_Sujin : MonoBehaviour
 
     void Update()
     {
-        if (LovePoint.instance.Sujin_end == true) //수진 엔딩을 봤다면
+        if (LovePoint.instance.sujin_end == true) //수진 엔딩을 봤다면
         {
             Sujin_Button.image.sprite = Changing_Sujin;
         }
@@ -25,7 +25,7 @@ public class Ending_Collect_Sujin : MonoBehaviour
 
     public void GotoEnding()
     {
-        if (LovePoint.instance.Sujin_end == true)
+        if (LovePoint.instance.sujin_end == true)
         {
             SceneManager.LoadScene("Sujin_End");
         }

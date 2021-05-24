@@ -17,7 +17,7 @@ public class Ending_Collect_Minseok : MonoBehaviour
 
     void Update()
     {
-        if (LovePoint.instance.Minseok_end == true) //민석 엔딩을 봤다면
+        if (LovePoint.instance.minseok_end == true) //민석 엔딩을 봤다면
         {
             Minseok_Button.image.sprite = Changing_Minseok;
         }
@@ -25,7 +25,7 @@ public class Ending_Collect_Minseok : MonoBehaviour
 
     public void GotoEnding()
     {
-        if (LovePoint.instance.Minseok_end == true)
+        if (LovePoint.instance.minseok_end == true)
         {
             SceneManager.LoadScene("Minseok_End");
         }

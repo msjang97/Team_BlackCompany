@@ -20,7 +20,7 @@ public class Ending_Collect_Enji : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LovePoint.instance.Enji_end == true) //은지 엔딩을 봤다면
+        if (LovePoint.instance.enji_end == true) //은지 엔딩을 봤다면
         {
             Enji_Button.image.sprite = Changing_Enji;
         }
@@ -30,7 +30,7 @@ public class Ending_Collect_Enji : MonoBehaviour
 
     public void GotoEnding()
     {
-        if (LovePoint.instance.Enji_end == true)
+        if (LovePoint.instance.enji_end == true)
         {
             SceneManager.LoadScene("Enji_End");
         }
