@@ -37,7 +37,7 @@ public class Choice : MonoBehaviour
 
     private void SelectChoice()
     {
-        if (bar.P_BarPosition.y < myPosition.y + 0.75 && bar.P_BarPosition.y > myPosition.y - 0.75)
+        if (bar.P_BarPosition.y < myPosition.y + 0.85 && bar.P_BarPosition.y > myPosition.y - 0.85)
         {
             bar.gameObject.transform.position = Vector3.Lerp(transform.position, myPosition, 0.01f);
             isSelected = true;
