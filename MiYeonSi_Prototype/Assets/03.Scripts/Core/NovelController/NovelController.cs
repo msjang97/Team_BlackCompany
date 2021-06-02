@@ -9,8 +9,10 @@ public class NovelController : MonoBehaviour
     public static NovelController instance;
     //private string txtFileName = null;
     private bool isAfterMiniGame = false;
-    [HideInInspector] public int lastBackground;
+    [HideInInspector]
+    public int lastBackground;
     string _chapterName;
+    string playSongName;
     public float time;
     public bool next_box;
     public int ch_count; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
@@ -59,7 +61,6 @@ public class NovelController : MonoBehaviour
         {
             Next();
             next_box = false;
-            SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground);
         }
         
     }
@@ -119,14 +120,15 @@ public class NovelController : MonoBehaviour
         if (SaveData.P_instance.isLoadData == true)
         {
             SaveData.P_instance.isLoadData = false;
-            lastBackground = SaveData.P_instance.SavedBackgroundLine;
-
-            HandleLine(data[lastBackground]);
-            _next = false;
-
-            // 순서를 위로 올리면, 로드 할 때 chapterProgress가 lastBackground가 되어 저장됨.
             chapterProgress = SaveData.P_instance.SavedChapterProgress;
             lastBackground = SaveData.P_instance.SavedBackgroundLine;
+            playSongName = SaveData.P_instance.SavedPlaySong;
+
+            HandleLine(data[lastBackground]);
+            Command_PlayMusic(playSongName);
+            _next = true;
+
+            Debug.Log(chapterProgress+ "" + lastBackground + playSongName);
         }
 
 
@@ -352,12 +354,12 @@ public class NovelController : MonoBehaviour
                 break;
             case "setBackground":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
-                lastBackground = chapterProgress;
                 Next(); // 배경 전환되면서 같이 전환.
                 break;
             case "setMiniGameAfterBG":
                 Command_SetLayerImage(data[1], BCFC.instance.background);
                 lastBackground = chapterProgress;
+                SaveData.P_instance.SaveGame(_chapterName, chapterProgress, lastBackground, playSongName);
                 break;
             case "setCinematic":
                 Command_SetLayerImage(data[1], BCFC.instance.cinematic);
@@ -471,9 +473,13 @@ public class NovelController : MonoBehaviour
         AudioClip clip = Resources.Load("Audio/Music/" + data) as AudioClip;
 
         if (clip != null)
+        {
             AudioManager.instance.PlaySong(clip);
+        }
         else
             Debug.LogError("Clip does not exist - " + data);
+
+        playSongName = data;
     }
 
     void Command_MoveCharacter(string data)

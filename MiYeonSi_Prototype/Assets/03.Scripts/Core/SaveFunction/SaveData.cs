@@ -38,6 +38,13 @@ public class SaveData : MonoBehaviour
         set { _savedBackgroundLine = value; }
     }
 
+    private string _savedPlaySong;
+    public string SavedPlaySong
+    {
+        get { return _savedPlaySong; }
+        set { _savedPlaySong = value; }
+    }
+
     private bool _isLoadData;
     public bool isLoadData
     {
@@ -65,7 +72,7 @@ public class SaveData : MonoBehaviour
         FileInfo dataFile = new FileInfo(dataPath);
         if (!dataFile.Exists)
         {
-            SaveGame("Chapter0_start", 0, 0);
+            SaveGame("Chapter0_start", 0, 0, "Title");
         }
 
         _chapterName = "";
@@ -74,23 +81,27 @@ public class SaveData : MonoBehaviour
     }
 
 
-    public void SaveGame(string chapterName, int chapterProgress, int backgroundLine)
+    public void SaveGame(string chapterName, int chapterProgress, int backgroundLine, string playSong)
     {
         _chapterName = chapterName;
         _savedChapterProgress = chapterProgress;
         _savedBackgroundLine = backgroundLine;
+        _savedPlaySong = playSong;
 
         FileInfo dataFile = new FileInfo(dataPath);
 
         FileStream fs = dataFile.Create();
         TextWriter tw = new StreamWriter(fs);
         tw.Write("ChapterName : " + _chapterName + "\n");
-        tw.Write("ChapterProgress : " + _savedChapterProgress + "\n");
+        tw.Write("ChapterProgress : " + _savedChapterProgress + "\n"); 
         tw.Write("SavedBackgroundLine : " + _savedBackgroundLine + "\n");
+        tw.Write("SavedPlaySong : " + _savedPlaySong + "\n");
+
         tw.Close();
         fs.Close();
 
-        Debug.Log(_chapterName + ", !!! line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine);
+        Debug.Log(_chapterName + ", line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine + ", " + _savedPlaySong);
+
         // 추가 작성
         // File.AppendAllText(Application.dataPath + "/SaveData.txt", "  !@#추가 내용");
     }
@@ -119,9 +130,14 @@ public class SaveData : MonoBehaviour
                     data = loadData[i].Split(' ', '\n');
                     _savedBackgroundLine = int.Parse(data[2]);
                 }
+                else if (loadData[i].StartsWith("SavedPlaySong : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    _savedPlaySong = data[2];
+                }
             }
 
-            Debug.Log(_chapterName + ", line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine);
+            Debug.Log("Load!" + _chapterName + ", line : " + _savedChapterProgress + " lastBackground : " + _savedBackgroundLine + ", " + _savedPlaySong);
         }
         else
         {
