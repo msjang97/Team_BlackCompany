@@ -14,22 +14,23 @@ public class Ending_Collect_Solo : MonoBehaviour
     void Start()
     {
         Solo_Button = GetComponent<Button>();
+        Solo_Button.image.sprite = Changing_Soio;
     }
 
     // Start is called before the first frame update
     void Update()
     {
-        if (LovePoint.instance.solo_end == true) //솔로 엔딩을 봤다면
+        /*if (LovePoint.instance.solo_end == true) //솔로 엔딩을 봤다면
         {
             Solo_Button.image.sprite = Changing_Soio;
-        }
+        }*/
     }
 
-    public void GotoEnding()
+   /* public void GotoEnding()
     {
         if (LovePoint.instance.solo_end == true)
         {
             SceneManager.LoadScene("Solo_End");
         }
-    }
+    }*/
 }

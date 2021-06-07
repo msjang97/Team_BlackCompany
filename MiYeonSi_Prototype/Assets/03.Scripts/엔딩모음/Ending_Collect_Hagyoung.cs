@@ -13,21 +13,22 @@ public class Ending_Collect_Hagyoung : MonoBehaviour
     void Start()
     {
         Hagyoung_Button = GetComponent<Button>();
+        Hagyoung_Button.image.sprite = Changing_Hagyuong;
     }
 
     void Update()
     {
-        if (LovePoint.instance.hagyong_end == true) //하경 엔딩을 봤다면
+        /*if (LovePoint.instance.hagyong_end == true) //하경 엔딩을 봤다면
         {
             Hagyoung_Button.image.sprite = Changing_Hagyuong;
-        }
+        }*/
     }
 
-    public void GotoEnding()
+    /*public void GotoEnding()
     {
         if (LovePoint.instance.hagyong_end == true)
         {
             SceneManager.LoadScene("Hagyoung_End");
         }
-    }
+    }*/
 }

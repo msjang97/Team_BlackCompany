@@ -13,21 +13,22 @@ public class Ending_Collect_Minseok : MonoBehaviour
     void Start()
     {
         Minseok_Button = GetComponent<Button>();
+        Minseok_Button.image.sprite = Changing_Minseok;
     }
 
     void Update()
     {
-        if (LovePoint.instance.minseok_end == true) //민석 엔딩을 봤다면
+        /*if (LovePoint.instance.minseok_end == true) //민석 엔딩을 봤다면
         {
             Minseok_Button.image.sprite = Changing_Minseok;
-        }
+        }*/
     }
 
-    public void GotoEnding()
+   /* public void GotoEnding()
     {
         if (LovePoint.instance.minseok_end == true)
         {
             SceneManager.LoadScene("Minseok_End");
         }
-    }
+    }*/
 }
