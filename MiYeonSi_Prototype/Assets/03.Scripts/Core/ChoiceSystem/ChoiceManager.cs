@@ -45,16 +45,22 @@ public class ChoiceManager : MonoBehaviour
 
     void Update()
     {
-        if (selectedNum != 0 && isMainSceneLoaded == false) //선택된 num이 있고, 아직 MainScene이 로드되지 않았을때 if문 실행.
+        if (selectedNum != 0 && isMainSceneLoaded == false && SceneManager.GetActiveScene().name == "SaSuJin_MiniGame") //선택된 num이 있고, 아직 MainScene이 로드되지 않았을때 if문 실행.
         {
             StartCoroutine("LoadMainScene");
             isMainSceneLoaded = true;  
         }
+        else if (selectedNum != 0 && isMainSceneLoaded == false && SceneManager.GetActiveScene().name != "SaSuJin_MiniGame") // 사수진게임을 제외한 나머지게임에 적용
+        {
+            SceneManager.LoadScene("MainSystem");
+            isMainSceneLoaded = true;
+        }
     }
 
-    IEnumerator LoadMainScene()
+    IEnumerator LoadMainScene() //사수진 게임만 적용
     {
         yield return new WaitForSeconds(2.0f); //애니메이션 재생시간만큼
         SceneManager.LoadScene("MainSystem");
     }
+
 }
