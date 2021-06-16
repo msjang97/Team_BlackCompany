@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainAudio : MonoBehaviour
 {
@@ -48,17 +49,23 @@ public class MainAudio : MonoBehaviour
     }
 
     private void Update()
-    {    
-        if (title.activeSelf == true )//|| main_menu.activeSelf == true)
+    {
+
+        if (SceneManager.GetActiveScene().name == "StartScene")
         {
-            check = true;
+            if (title.activeSelf == true)//|| main_menu.activeSelf == true)
+            {
+                check = true;
+            }
+            if (check == true)
+            {
+                //audio.playOnAwake = true;
+                audio.Play();
+                check = false;
+            }
         }
-        if (check == true)
-        {
-            //audio.playOnAwake = true;
-            audio.Play();
-            check = false;
-        }
+        else
+            audio.Stop();
      
     }
 
