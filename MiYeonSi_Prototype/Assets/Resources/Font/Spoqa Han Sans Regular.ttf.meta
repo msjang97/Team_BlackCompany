@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 996a0d862be29cc449ce077ba9dfc6f9
+guid: 9048f1b57f50ea046aa7c9fcdd233521
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,8 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
+  fontName: SpoqaHanSans
   fontNames:
-  - Daum
+  - SpoqaHanSans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
