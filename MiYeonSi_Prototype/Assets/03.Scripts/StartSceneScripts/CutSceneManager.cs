@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CutSceneManager : MonoBehaviour
 {
-    private float animationPlayTime = 1.0f;
+    [SerializeField]
+    private float animationPlayTime = 1.0f; //3이 원래 스피드, 현재는 빠른 진행을 위해 1로 바꿔놓음.
     private int i = 0;
     private static bool isCutScene = true;
 
