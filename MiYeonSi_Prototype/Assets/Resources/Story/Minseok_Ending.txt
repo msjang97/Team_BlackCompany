@@ -16,7 +16,7 @@ narrator "저 아저씨 좀 귀엽게 생기지 않았어? 가서 번호라도 �
 지찬우 "응?" changeExpression(지찬우,지찬우_당황,100)
 마민석 "할 말이 있어요. 오늘 이 말을 전하려고 쭉… 기다렸어요." changeExpression(마민석,마민석_0,100)
 
-setForeground(예시일러스트,false,1)
+setForeground(Ending_Minseok,false,1)
 
 narrator 어, 저 사람인가 봐! 고백하려나 본데?"
 narrator 쳇! 뭐야, 임자가 있었나... 누군지 몰라도 운 좋은 녀석이군."

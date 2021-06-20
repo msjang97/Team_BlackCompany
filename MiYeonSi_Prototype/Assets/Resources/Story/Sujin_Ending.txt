@@ -25,7 +25,7 @@ setBackground(카페_1,false,1) playMusic(Sunny)
 사수진 "이제라도 알았으니 다행이다. 너무 자책하지 마. 더 늦게 깨달았으면 그만큼 더 힘들어졌을 테니까… 그럼 다 해결된 거지?" changeExpression(사수진,사수진_발그레,100)
 지찬우 "응… 고마워, 수진아. 덕분에 마음이 좀 편해졌어. 앞으로 연애 같은 건 포기할래." changeExpression(지찬우,지찬우_해탈,100)
 
-setForeground(예시일러스트,false,1)
+setForeground(Ending_Sujin,false,1)
 
 사수진 "잘 생각했어. 앞으로는 다른 사람한테 눈 돌리지 마." changeExpression(사수진,사수진_4,100)
 지찬우 "연애세포라니, 그런 걸 믿었던 내가 바보 같네…" changeExpression(지찬우,지찬우_0,100)

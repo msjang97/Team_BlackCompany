@@ -1,6 +1,6 @@
+setBackground(강의실_2,false,1) playMusic(Class)
 교수님 "저번 시간에 말했듯이 이번 프로젝트는 조별 과제입니다." changeExpression(교수님,교수님_0,100)
 교수님 "공정하게 추첨으로 조를 편성했으니 다들 PPT 화면 확인해주세요." changeExpression(교수님,교수님_0,100)
-setBackground(강의실_2,false,1) playMusic(Class)
 사수진 "뭐야, 벌써 전화 몇 통을 했는데 받지도 않고… 혹시 자나?" changeExpression(사수진,사수진_1,100)
 narrator "문이 벌컥 열리며 찬우가 들어온다."
 사수진 "지찬우, 너 휴대폰 확인 안 해? 벌써 전화 몇 통을 했는지 알아?" changeExpression(사수진,사수진_1,100)
@@ -84,14 +84,14 @@ setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
 
 miniGame(SaSuJin_MiniGame) playMusic(Evolution)
 {
-   "아, 이거 내 번호야. 나중에 필요한 일 있으면 연락해." 
-        최은지 "맞다, 깜빡할 뻔했네! 그럼 내 번호도 적어 줄게. 폰 이리 줘봐." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_4,100)
+   "은지야! 나 너 좋아하는 데 과제 핑계 대서 번호 좀 따려고!" 
+        최은지 "…수진이가 조장이니까 연락은 수진이 통해서 하는 거로 하자" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_1,100)
    "아~ 그래도 조원인데 번호 정도는 알아야 하지 않을까~ 아, 혼잣말이니까 신경 쓰지 마.." 
         최은지 "…? 그럼 번호 교환할까?" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_0,100)
-   "은지야! 나 너 좋아하는 데 과제 핑계 대서 번호 좀 따려고!"
-        최은지 "…수진이가 조장이니까 연락은 수진이 통해서 하는 거로 하자." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_1,100)
    "은지야, 우리 같은 조인데 연락처 교환해야 하지 않을까?"
-        최은지 "그게 좋겠다. 그럼 번호 적어 줄게." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_3,100) 
+        최은지 "그게 좋겠다. 그럼 번호 적어 줄게." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_2,100)
+   "아, 이거 내 번호야. 나중에 필요한 일 있으면 연락해."
+        최은지 "맞다, 깜빡할 뻔했네! 그럼 내 번호도 적어 줄게. 폰 이리 줘봐." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_3,100) 
 }
 
 setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
@@ -108,14 +108,14 @@ setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
 
 choice 
 {
+	"응. 네가 보기엔 어때? 가능성 있어?" 
+        사수진 "CC 하다가 좋게 끝난 애들 못 봤는데… 그리고 우리 과에 최은지 좋아하는 애들 수두룩한 거 알지?." setBackground(강의실_2,false,1) changeExpression(사수진,사수진_0,100)
     "알면 제발 좀 도와주라, 너 은지랑 친하잖아. 도와줄 거지?"
-        사수진 "내가 왜 그래야 하는데? " setBackground(강의실_2,false,1) changeExpression(사수진,사수진_1,100)       
-    "에이~ 나 여자한테 관심 없어. 너랑 놀 때가 제일 재밌더라. "
-        사수진 "거짓말, 표정부터가 다르던데. 난 네가 그렇게 웃음이 많은 줄은 처음 알았네." setBackground(강의실_2,false,1) changeExpression(사수진,사수진_3,100)        
+        사수진 "내가 왜 그래야 하는데? " setBackground(강의실_2,false,1) changeExpression(사수진,사수진_1,100)                
     "아니, 별로 관심 없는데? 친하지도 않고."
         사수진 "아닌 것 같던데. 너 말할 때 표정에서 다 드러나는 거 알아?." setBackground(강의실_2,false,1) changeExpression(사수진,사수진_2,100)      
-	"응. 네가 보기엔 어때? 가능성 있어?" 
-        사수진 "CC 하다가 좋게 끝난 애들 못 봤는데… 그리고 우리 과에 최은지 좋아하는 애들 수두룩한 거 알지?." setBackground(강의실_2,false,1) changeExpression(사수진,사수진_0,100)     
+    "에이~ 나 여자한테 관심 없어. 너랑 놀 때가 제일 재밌더라. "
+        사수진 "거짓말, 표정부터가 다르던데. 난 네가 그렇게 웃음이 많은 줄은 처음 알았네." setBackground(강의실_2,false,1) changeExpression(사수진,사수진_3,100) 
 }
 
 setMiniGameAfterBG(강의실_2,false,1) 
