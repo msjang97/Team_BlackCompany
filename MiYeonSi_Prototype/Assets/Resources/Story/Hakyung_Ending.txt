@@ -53,7 +53,7 @@ setBackground(카페_1,false,1) playMusic(Sunny)
 이지혜 "크하하하학! 말은 그렇게 하지만 사실 제일 흥분한 건 네놈 아니냐?!"  changeExpression(안하경,안하경_0,100) 
 안하경 "껄껄걸! 다들 못 말린다니깐~ 좋다! 여기 앞으로 모여!" changeExpression(안하경,안하경_2,100)
 
-setForeground(Ending_Hagyoung,false,1)
+setForeground(예시일러스트,false,1)
 
 안하경 "자, 다들 김치~" changeExpression(안하경,안하경_2,100)
 지찬우 "…" changeExpression(지찬우,지찬우_당황,100)
