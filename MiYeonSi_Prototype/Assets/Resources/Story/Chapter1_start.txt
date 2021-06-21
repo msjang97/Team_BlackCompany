@@ -1,3 +1,5 @@
+setForeground(스테이지1,false,1)
+removeForeground()
 setBackground(강의실_2,false,1) playMusic(Class)
 교수님 "저번 시간에 말했듯이 이번 프로젝트는 조별 과제입니다." changeExpression(교수님,교수님_0,100)
 교수님 "공정하게 추첨으로 조를 편성했으니 다들 PPT 화면 확인해주세요." changeExpression(교수님,교수님_0,100)

@@ -1,3 +1,5 @@
+setForeground(스테이지7,false,1)
+removeForeground()
 setBackground(대학캠퍼스_밤,false,1) playMusic(Sunny)
 연애세포 "이야~ 드디어 축젯날이 밝았구만!“ changeExpression(연애세포,연애세포_3,100)
 지찬우 "왜 그렇게 들뜬 거야? 난 시끄러운 건 질색인데...“ changeExpression(지찬우,지찬우_쭈글,100)

@@ -1,3 +1,5 @@
+setForeground(스테이지6,false,1)
+removeForeground()
 setBackground(영화관_1,false,1) playMusic(Sunny)
 지찬우 “…너무 일찍 왔나?” changeExpression(지찬우,지찬우_긴장,100)
 연애세포 ”지찬우! 지찬우! 지찬우 넌 천재야! 맨날 말까지 더듬던 애가 어떻게 그렇게 거짓말을 술술 했지?" changeExpression(연애세포,연애세포_3,100)
@@ -209,5 +211,5 @@ setBackground(Room,false,1) playMusic(Evolution)
 연애세포 “그렇구나… 너 오늘 좀 달라 보인다…” changeExpression(지찬우,지찬우_0,100)
 지찬우 “응? 뭐가?” changeExpression(지찬우,지찬우_0,100)
 연애세포 “아무 것도 아냐… 느, 늦었으니까 잠이나 자자!” changeExpression(연애세포,연애세포_1,100)
-
+Load(Chapter7_start)
 

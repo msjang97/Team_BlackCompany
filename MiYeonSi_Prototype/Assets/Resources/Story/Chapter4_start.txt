@@ -1,3 +1,5 @@
+setForeground(스테이지4,false,1)
+removeForeground()
 setBackground(Room,false,1)
 연애세포 "은지한테 같이 술 마시자고 하자." changeExpression(연애세포,연애세포_0,100)
 지찬우 "뭐? 싫어… 술 마시면 다음 날 힘들단 말이야. changeExpression(지찬우,지찬우_깜짝,100)
@@ -182,3 +184,5 @@ setBackground(Room_2,false,1) playMusic(Sunny)
 지찬우 "역시 은지는 수진이처럼 잘 생기고 능력 좋은 애랑…" changeExpression(지찬우,지찬우_해탈,100)
 연애세포 "네가 언제는 자신 있었냐? 뭐가 문제인데? 되면 되는 거고 안 되면 어쩔 수 없고. 뭘 그렇게 혼자 오바해." changeExpression(연애세포,연애세포_4,100)
 지찬우 "응… 그, 그렇지..." changeExpression(지찬우,지찬우_해탈,100)
+
+Load(Chapter5_start)

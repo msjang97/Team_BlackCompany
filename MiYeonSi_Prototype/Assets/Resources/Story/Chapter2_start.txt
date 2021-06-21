@@ -1,3 +1,5 @@
+setForeground(스테이지2,false,1)
+removeForeground()
 setBackground(Room,false,1) playMusic(Sunny)
 연애세포 "뭐야, 벌써 나가? 약속까지 시간 좀 남았는데?" changeExpression(연애세포,연애세포_0,100)
 지찬우 "그렇긴 한데, 중고 판매 사이트에서 표를 싸게 팔길래 미리 만나서 사가기로 했거든.다른 애들 것도 내가 구해주기로 했어." changeExpression(지찬우,지찬우_0,100)
@@ -158,4 +160,4 @@ setMiniGameAfterBG(민속촌_1,false,1) playMusic(FolkVillage)
 지찬우 "으,응…! 조심히 들어가…" changeExpression(지찬우,지찬우_쑥스,100)
 연애세포 "하루 만에 많이 친해졌네. 느낌 좋은데?" changeExpression(연애세포,연애세포_3,100)
 
-setGotoStartScene()
+Load(Chapter3_start)

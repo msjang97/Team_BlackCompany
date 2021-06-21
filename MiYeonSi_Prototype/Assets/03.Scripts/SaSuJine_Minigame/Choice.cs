@@ -12,11 +12,13 @@ public class Choice : MonoBehaviour
 
     private bool isSelected;
     private float destroyedTime = 2.0f;
+    static public bool lovecheck = false;
 
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         myPosition = this.transform.position;
+        lovecheck = false;
     }
 
     void Update()
@@ -25,6 +27,7 @@ public class Choice : MonoBehaviour
         {
             SelectChoice();
             AnimationController();
+         
         }
         else if (time_sujin.TimeCost <= 0.0f )
         {
@@ -33,6 +36,8 @@ public class Choice : MonoBehaviour
             else
             AnimationController();
         }
+
+       
     }
 
     private void SelectChoice()
@@ -44,22 +49,11 @@ public class Choice : MonoBehaviour
             animator.SetBool("IsSelected", true);
             name = name.Replace("Choice", "");
             ChoiceManager.P_instance.selectedNum = int.Parse(name);
-            switch (ChoiceManager.P_instance.selectedNum)
+
+            if (lovecheck == true)
             {
-                case 1:
-                    LovePoint.instance.enji_LovePoint += -5;
-                    break;
-                case 2:
-                    LovePoint.instance.enji_LovePoint += 0;
-                    break;
-                case 3:
-                    LovePoint.instance.enji_LovePoint += 3;
-                    break;
-                case 4:
-                    LovePoint.instance.enji_LovePoint += 5;
-                    break;
-                default:
-                    break;
+                Set_Lovepoint();
+                lovecheck = false;
             }
         }
     }
@@ -80,5 +74,27 @@ public class Choice : MonoBehaviour
             animator.SetBool("havetoDestroy", true);
             Destroy(this.gameObject, destroyedTime);
         }          
+    }
+
+
+    public void Set_Lovepoint()
+    {
+        switch (ChoiceManager.P_instance.selectedNum)
+        {
+            case 1:
+                LovePoint.instance.Main_LovePoint_Cal(-5);
+                break;
+            case 2:
+                LovePoint.instance.Main_LovePoint_Cal(0);
+                break;
+            case 3:
+                LovePoint.instance.Main_LovePoint_Cal(3);
+                break;
+            case 4:
+                LovePoint.instance.Main_LovePoint_Cal(5);
+                break;
+            default:
+                break;
+        }
     }
 }

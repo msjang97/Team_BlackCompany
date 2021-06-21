@@ -37,26 +37,18 @@ public class LovePoint : MonoBehaviour
     {
         // 챕터 카운트를 가져와서 각각 챕터의 방해자에게 호감도 넣어주기 (사수진-1,4 ,7 / 안하경-3,6  / 마민석-2 ,5)
         if (NovelController.instance.ch_count == 1 || NovelController.instance.ch_count == 4 || NovelController.instance.ch_count == 7) // 사수진       
-            sujin_LovePoint = point;
+            sujin_LovePoint += point;
         
         else if (NovelController.instance.ch_count == 3 || NovelController.instance.ch_count == 6 ) //안하경        
-            hagyoung_LovePoint = point;
+            hagyoung_LovePoint += point;
         
         else if (NovelController.instance.ch_count == 2 || NovelController.instance.ch_count == 5 ) // 마민석       
-            minseok_LovePoint = point;
+            minseok_LovePoint += point;
           
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Main_LovePoint_Cal (int point)
     {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {      
-
+        enji_LovePoint += point;
     }
 }

@@ -36,5 +36,9 @@ public class Bar : MonoBehaviour
     {
         isStoped = true;
         BarPosition = this.transform.position;
-    }  
+        Choice.lovecheck = true;
+        //Set_Lovepoint();
+    }
+
+   
 }

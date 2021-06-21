@@ -1,3 +1,5 @@
+setForeground(스테이지3,false,1)
+removeForeground()
 setBackground(대학캠퍼스_1,false,1) playMusic(Sunny)
 사수진 "찬우야, MT 가?" changeExpression(사수진,사수진_0,100)
 지찬우 "별로 안 가고 싶은데… 어색한 사람들끼리 강원도 산골에 모여서 술 마시고 노는 게 뭐가 좋다는 거야…" changeExpression(지찬우,지찬우_1,100)
@@ -184,4 +186,4 @@ setBackground(Room,false,1)
 사수진	 "그럼 난 간다. 해장하고 씻고 자! 귀찮다고 그냥 자면 안 돼." changeExpression(사수진,사수진_0,100)
 지찬우	 "고마워… 잘 가…" changeExpression(지찬우,지찬우_쭈글,100)
 
-
+Load(Chapter4_start)
