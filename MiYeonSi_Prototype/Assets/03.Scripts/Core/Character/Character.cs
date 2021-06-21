@@ -216,7 +216,7 @@ public class Character
     {
         CharacterManager cm = CharacterManager.instance;
         //locate the character prefab.
-        GameObject prefab = Resources.Load("Characters/" + _name) as GameObject;
+        GameObject prefab = Resources.Load("CharacterPrefab/" + _name) as GameObject;
         if (prefab == null)
         {
             Debug.Log("프리팹이 null값입니다!!");
