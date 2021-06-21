@@ -60,7 +60,8 @@ setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
 사수진 "주제가 한국의 문화 체험 후 분석한 보고서 작성이라고 했나? 이런 걸 왜 조별 과제로 시키는 거야?" changeExpression(사수진,사수진_찌릿,100)
 최은지 "김 교수님이 원래 이런 거 좋아하시잖아~ 그냥 우리 친해지라고 내주셨나 봐. 성적도 잘 주신대." changeExpression(최은지,최은지_0,100)
 
-miniGame(SaSuJin_MiniGame) playMusic(Evolution)
+playMusic(Evolution)
+miniGame(SaSuJin_MiniGame)
 {
     "미안한데 나 그날 아플 예정이라 참여 못 할 것 같아." 
         최은지 "우리 언제 만날지도 안 정했는데?" setBackground(강의실_2,false,1)  changeExpression(최은지,최은지_1,100)
@@ -84,7 +85,8 @@ setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
 지찬우 "뭐? 너무 노골적이지 않아?" changeExpression(지찬우,지찬우_깜짝,100)
 연애세포 "그러니까 핑계 대서 자연스럽게 물어보자는 거 아냐!" changeExpression(연애세포,연애세포_2,100)
 
-miniGame(SaSuJin_MiniGame) playMusic(Evolution)
+playMusic(Evolution)
+miniGame(SaSuJin_MiniGame)
 {
    "은지야! 나 너 좋아하는 데 과제 핑계 대서 번호 좀 따려고!" 
         최은지 "…수진이가 조장이니까 연락은 수진이 통해서 하는 거로 하자" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_1,100)

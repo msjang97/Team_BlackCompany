@@ -68,16 +68,16 @@ public class AudioManager : MonoBehaviour
     {
         if (song != null)
         {
-            for (int i = 0; i < allSongs.Count; i++)
-            {
-                SONG s = allSongs[i];
-                if (s.clip == song)
-                {
-                    activeSong = s;
-                    break;
-                }
-            }
-            if (activeSong == null || activeSong.clip != song)
+            //for (int i = 0; i < allSongs.Count; i++)
+            //{
+            //    SONG s = allSongs[i];
+            //    if (s.clip == song)
+            //    {
+            //        activeSong = s;
+            //        break;
+            //    }
+            //}
+            //if (activeSong == null || activeSong.clip != song)
                 activeSong = new SONG(song, maxVolume, pitch, startingVolume, PlayOnStart, loop);
         }
 

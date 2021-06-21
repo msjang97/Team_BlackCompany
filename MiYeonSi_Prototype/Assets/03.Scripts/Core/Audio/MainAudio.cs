@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MainAudio : MonoBehaviour
 {
     public GameObject title;
-    public GameObject main_menu;
 
 
     private AudioSource audio;
@@ -27,17 +26,6 @@ public class MainAudio : MonoBehaviour
     }
     private void Awake()
     {
-        if (null == instance)
-        {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-        
-
     }
 
     private void Start()
@@ -53,13 +41,13 @@ public class MainAudio : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "StartScene")
         {
-            if (title.activeSelf == true)//|| main_menu.activeSelf == true)
+            if (title.activeSelf == true)
             {
                 check = true;
             }
             if (check == true)
             {
-                //audio.playOnAwake = true;
+                if(!audio.isPlaying)
                 audio.Play();
                 check = false;
             }
