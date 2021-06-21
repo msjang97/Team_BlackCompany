@@ -395,12 +395,19 @@ public class NovelController : MonoBehaviour
             case "removeForeground":
                 Command_removeForeground(data[1]);
                 break;
-
+            case "goEnding":
+                Go_EndingCredit();
+                break;
         }
     }
     void Go_start()
     {
         SceneManager.LoadScene("StartScene");
+    }
+
+    void Go_EndingCredit()
+    {
+        SceneManager.LoadScene("EndingCredit");
     }
 
     void Command_goToStartScene2()
