@@ -10,7 +10,7 @@ public class ShowMainMenu : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        MainMenu = this.transform.GetChild(3).gameObject;        
+        MainMenu = this.transform.GetChild(2).gameObject;        
     }
 
     public void ActiveMainMenu()

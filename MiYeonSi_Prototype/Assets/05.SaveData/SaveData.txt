@@ -1,4 +1,4 @@
 ChapterName : Chapter2_start
-ChapterProgress : 137
-SavedBackgroundLine : 137
+ChapterProgress : 139
+SavedBackgroundLine : 139
 SavedPlaySong : FolkVillage
