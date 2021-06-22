@@ -8,6 +8,7 @@ narrator "…"
 narrator "….."
 지찬우 "하여간 부끄럼이 많다니깐… 둘만 있을 때는 말해도 되는데…" changeExpression(지찬우,지찬우_쑥스,100)
 setForeground(Ending_Solo,false,1)
+removeForeground()
 지찬우 "연애세포는 무슨… 그런 녀석 도움 없이 이렇게 혼자서도 여자친구 만들 수 있었는데…" changeExpression(지찬우,지찬우_가짜웃음,100)
 지찬우 "나는 그런 지역 마스코트처럼 생긴 놈한테 뭘 기대한 거지?" changeExpression(지찬우,지찬우_해탈,100)
 지찬우 "하하하, 행복하다! 행복해! 내 소원이 이뤄졌어~" changeExpression(지찬우,지찬우_쑥스,100)

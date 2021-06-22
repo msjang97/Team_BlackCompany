@@ -89,6 +89,7 @@ setBackground(데이트_2,false,1) playMusic(Sunny)
 지찬우 "나… 남자친구…!" changeExpression(지찬우,지찬우_쑥스,100)
 
 setForeground(예시일러스트,false,1)
+removeForeground()
 
 최은지 "그럼 가자! 찬우야!" changeExpression(최은지,최은지_신나,100)
 지찬우 "자, 잠깐…!" changeExpression(지찬우,지찬우_깜짝,100)

@@ -17,7 +17,7 @@ narrator "저 아저씨 좀 귀엽게 생기지 않았어? 가서 번호라도 �
 마민석 "할 말이 있어요. 오늘 이 말을 전하려고 쭉… 기다렸어요." changeExpression(마민석,마민석_0,100)
 
 setForeground(Ending_Minseok,false,1)
-
+removeForeground()
 narrator “어, 저 사람인가 봐! 고백하려나 본데?"
 narrator “쳇! 뭐야, 임자가 있었나... 누군지 몰라도 운 좋은 녀석이군."
 지찬우 "지금 이게 무슨…" changeExpression(지찬우,지찬우_경악,100)
@@ -27,8 +27,6 @@ narrator “쳇! 뭐야, 임자가 있었나... 누군지 몰라도 운 좋은 �
 마민석 "찬우군과 만날 때마다 저의 확신은 점점 깊어졌어요. 이게… ‘운명’이라는 걸까?" changeExpression(마민석,마민석_3,100)
 지찬우 "자, 잠깐만…" changeExpression(지찬우,지찬우_경악,100)
 마민석 "찬우군, 좋아해요. 저와 정식으로 교제해주세요." changeExpression(마민석,마민석_3,100)
-
-removeForeground()
 
 최은지 "어? 찬우야! 거기 뭐 구경…?" changeExpression(최은지,최은지_0,100)
 지찬우 "으, 은지야!!! 오지 마!!!!!!" changeExpression(지찬우,지찬우_당황,100)

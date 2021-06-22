@@ -28,7 +28,7 @@ setBackground(복도_1,false,1) playMusic(Sunny)
 지찬우 "…?" changeExpression(지찬우,지찬우_경악,100)
 안하경 "신고합니다! 저, 안하경은 오늘부로 지찬우의 여자친구 역할을 명! 받았습니다! 이에 신고합니다!" changeExpression(안하경,안하경_3,100)
 지찬우 "여자친구? 내 의사는?!" changeExpression(지찬우,지찬우_경악,100)
-안하경  "선배, 집 앞에 차를 대령했습니다. 소개하고 싶은 사람들이 있으니 같이 가주셨으면 합니다." changeExpression(안하경,안하경_0,100)
+안하경 "선배, 집 앞에 차를 대령했습니다. 소개하고 싶은 사람들이 있으니 같이 가주셨으면 합니다." changeExpression(안하경,안하경_0,100)
 
 setBackground(시내_1,false,1) playMusic(Sunny)
 
@@ -54,6 +54,7 @@ setBackground(카페_1,false,1) playMusic(Sunny)
 안하경 "껄껄걸! 다들 못 말린다니깐~ 좋다! 여기 앞으로 모여!" changeExpression(안하경,안하경_2,100)
 
 setForeground(Ending_Hagyoung,false,1)
+removeForeground()
 
 안하경 "자, 다들 김치~" changeExpression(안하경,안하경_2,100)
 지찬우 "…" changeExpression(지찬우,지찬우_당황,100)
