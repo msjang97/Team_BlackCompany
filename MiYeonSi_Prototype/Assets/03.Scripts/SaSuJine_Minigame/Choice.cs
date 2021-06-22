@@ -4,53 +4,39 @@ using UnityEngine;
 
 public class Choice : MonoBehaviour
 {   
-    private Animator animator;
     private Vector3 myPosition;
     public Bar bar;
-    public Timer_SuJin time_sujin;
-
-
-    private bool isSelected;
-    private float destroyedTime = 2.0f;
+    public TimeBar timeBar;
     static public bool lovecheck = false;
 
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
         myPosition = this.transform.position;
         lovecheck = false;
     }
 
     void Update()
     {
-        if (bar.P_isStoped == true)
+        if (bar.P_isStoped == true) //바가 멈추면 SelectChoice() 실행.
         {
-            SelectChoice();
-            AnimationController();
-         
+            SelectChoice();  
         }
-        else if (time_sujin.TimeCost <= 0.0f )
+        else if (timeBar.TimeCost <= 0.0f ) //시간초가 다 되면 TiemOutSelectChoice() 실행.
         {
             if(this.name == "Choice1")
             TimeOutSelectChoice();
-            else
-            AnimationController();
-        }
-
-       
+        }    
     }
 
-    private void SelectChoice()
+    private void SelectChoice() //바 위치 검사해서 선택된 번호 넘겨주기.
     {
-        if (bar.P_BarPosition.y < myPosition.y + 0.85 && bar.P_BarPosition.y > myPosition.y - 0.85)
+        if (bar.BarPosition.y < myPosition.y + 120 && bar.BarPosition.y > myPosition.y -120)
         {
-            bar.gameObject.transform.position = Vector3.Lerp(transform.position, myPosition, 0.01f);
-            isSelected = true;
-            animator.SetBool("IsSelected", true);
+            bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 1.0f);
             name = name.Replace("Choice", "");
             ChoiceManager.P_instance.selectedNum = int.Parse(name);
 
-            if (lovecheck == true)
+            if (lovecheck == true) //호감도 조정해주기.
             {
                 Set_Lovepoint();
                 lovecheck = false;
@@ -58,26 +44,19 @@ public class Choice : MonoBehaviour
         }
     }
 
-    private void TimeOutSelectChoice()
+    private void TimeOutSelectChoice() //시간이 다 지났을 때 1번 선택지가 자동으로 선택되게.
     {
-        bar.gameObject.transform.position = Vector3.Lerp(transform.position, myPosition, 0.01f);
-        isSelected = true;
-        animator.SetBool("IsSelected", true);
-
+        bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 1.0f);
         ChoiceManager.P_instance.selectedNum = 1;
-    }
 
-    private void AnimationController()
-    {
-        if (isSelected == false)
+        if (lovecheck == true) //호감도 조정해주기.
         {
-            animator.SetBool("havetoDestroy", true);
-            Destroy(this.gameObject, destroyedTime);
-        }          
+            Set_Lovepoint();
+            lovecheck = false;
+        }
     }
 
-
-    public void Set_Lovepoint()
+    public void Set_Lovepoint() //호감도 조정.
     {
         switch (ChoiceManager.P_instance.selectedNum)
         {
