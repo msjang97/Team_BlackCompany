@@ -384,7 +384,7 @@ public class NovelController : MonoBehaviour
                 break;
             case "playMusic":
                 Command_PlayMusic(data[1]);
-                //Next(); // 배경음 전환되면서 같이 전환.
+                Next(); // 배경음 전환되면서 같이 전환.
                 break;
             case "move":
                 Command_MoveCharacter(data[1]);
