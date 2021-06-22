@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Choices : MonoBehaviour
 {
-    public TextMeshProUGUI[] tmpro;
+    public Text[] ChoiceTexts;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class Choices : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            tmpro[i].text = ChoiceManager.P_instance.choices[i];
+            ChoiceTexts[i].text = ChoiceManager.P_instance.choices[i];
         }
     }
 }

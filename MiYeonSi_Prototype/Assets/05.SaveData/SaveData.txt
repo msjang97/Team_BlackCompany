@@ -1,4 +1,4 @@
 ChapterName : Chapter1_start
-ChapterProgress : 112
-SavedBackgroundLine : 112
-SavedPlaySong : Class
+ChapterProgress : 50
+SavedBackgroundLine : 50
+SavedPlaySong : 

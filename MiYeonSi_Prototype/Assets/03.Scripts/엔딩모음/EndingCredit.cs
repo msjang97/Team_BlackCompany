@@ -13,6 +13,7 @@ public class EndingCredit : MonoBehaviour
         time += Time.deltaTime;
         if (time > 17.5f)
         {
+            AudioManager.instance.StopSong();
             SceneManager.LoadScene("StartScene");
         }
     }
