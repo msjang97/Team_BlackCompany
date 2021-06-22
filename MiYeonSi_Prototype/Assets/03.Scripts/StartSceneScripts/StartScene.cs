@@ -4,21 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour
-{
-    public GameObject OptionButton;
-
-    private void Awake()
-    {
-        StartCoroutine("HideOptionButtonForSeconds");    
-    }
-
-    IEnumerator HideOptionButtonForSeconds()
-    {
-        OptionButton.SetActive(false);
-        yield return new WaitForSeconds(2.0f);
-        OptionButton.SetActive(true);
-    }
-
+{  
     public void StartGameScene() // 게임 시작
     {
         SceneManager.LoadScene("MainSystem");

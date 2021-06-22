@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72acc29754d04f42a99992e4259d431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationPlayTime: 1
+  animationPlayTime: 3
   CutScenes:
   - {fileID: 486493812}
   - {fileID: 109701424}
