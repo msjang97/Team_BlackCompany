@@ -32,7 +32,7 @@ public class Choice : MonoBehaviour
     {
         if (bar.BarPosition.y < myPosition.y + 120 && bar.BarPosition.y > myPosition.y -120)
         {
-            bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 1.0f);
+            bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 0.9f);
             name = name.Replace("Choice", "");
             ChoiceManager.P_instance.selectedNum = int.Parse(name);
 
@@ -46,7 +46,7 @@ public class Choice : MonoBehaviour
 
     private void TimeOutSelectChoice() //시간이 다 지났을 때 1번 선택지가 자동으로 선택되게.
     {
-        bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 1.0f);
+        bar.BarPosition = Vector2.Lerp(bar.BarPosition, myPosition, 0.9f);
         ChoiceManager.P_instance.selectedNum = 1;
 
         if (lovecheck == true) //호감도 조정해주기.

@@ -6,24 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class TimeLimt : MonoBehaviour
 {
-    Text text;
     public static float rTime;
-    
+    public Slider TimeSlider;
+
     void Start()
     {
         rTime = 10f;
-        text = GetComponent<Text>();
+        TimeSlider.maxValue = rTime;
     }
 
     void Update()
     {
         rTime -= Time.deltaTime;
+        TimeSlider.value = rTime;
+
         if (rTime < 0)
         { 
             rTime = 0;
             ChoiceManager.P_instance.selectedNum = 1;
         }
-
-        text.text = " " +  Mathf.Round(rTime);
     }
 }

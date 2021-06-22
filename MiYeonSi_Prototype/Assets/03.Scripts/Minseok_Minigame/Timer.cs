@@ -5,24 +5,23 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    private Text timerText;
-    private float time;
+    private float time = 30;
     private int currentTime;
     public static bool stop = false;
+    public Slider TimeSlider;
 
     // Use this for initialization
     void Start()
     {
-        time = 30;
-        timerText = GetComponent<Text>();
+        TimeSlider.maxValue = time;
     }
 
     // Update is called once per frame
     void Update()
     {
         time -= Time.deltaTime;
+        TimeSlider.value = time;
         currentTime = (int)time;
-        timerText.text = currentTime.ToString();
 
         if (currentTime <= 0)
         {
