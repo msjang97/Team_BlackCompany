@@ -5,7 +5,7 @@ setBackground(Room,false,1) playMusic(Sunny)
 연애세포 "그거 지금 나 들으라고 하는 소리냐? 난 최선을 다했거든? 애초에 네가 분수에 안 맞게…" changeExpression(연애세포,연애세포_2,100)
 
 narrator "링링링 링링링 링리리리링"
-setForeground(예시일러스트,false,1)
+setForeground(전화옴,false,1)
 removeForeground()
 
 연애세포 "…야, 전화 오는데?" changeExpression(연애세포,연애세포_1,100)
@@ -14,7 +14,8 @@ removeForeground()
 지찬우 "어… 그래. 은지… 은지?! 으, 은지라고?! 이, 이리 줘!!!" changeExpression(지찬우,지찬우_당황,100)
 
 narrator "달칵"
-setForeground(예시일러스트,false,1)
+setForeground(전화받음,false,1)
+removeForeground()
 
 지찬우 "여… 여보세요…" changeExpression(지찬우,지찬우_긴장,100)
 최은지 "어? 여보세요? 찬우야!" changeExpression(최은지,최은지_0,100)
@@ -40,7 +41,6 @@ setForeground(예시일러스트,false,1)
 연애세포 "어? 그, 그렇지! 잘되면 다 내 덕으로 알아, 인마! 내일 데이트 준비나 잘하라고." changeExpression(연애세포,연애세포_0,100)
 지찬우 "하여간 큰소리는…" changeExpression(지찬우,지찬우_0,100)
 
-removeForeground()
 
 setBackground(데이트_1,false,1) playMusic(Sunny)
 연애세포 "나 너무 떨리는데 그냥 집에 가면 안돼?" changeExpression(연애세포,연애세포_1,100)
@@ -97,3 +97,5 @@ setForeground(예시일러스트,false,1)
 최은지 "올해는 눈이 안 오려나 싶었는데 크리스마스에 내리다니… 정말 낭만적이다."  changeExpression(최은지,최은지_4,100)
 지찬우 "응… 첫눈을 너랑 맞다니 꿈만 같아…"  changeExpression(지찬우,지찬우_쑥스,100)
 지찬우 "연애세포… 네 덕분에 내 소원이 이뤄졌어! 연애의 신이라는 거 진짜였구나!!! 정말 고마워!" changeExpression(지찬우,지찬우_쑥스,100)
+
+goEndingCredit()
