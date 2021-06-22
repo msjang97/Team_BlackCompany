@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 public class TimeLimt : MonoBehaviour
 {
     Text text;
-    public static float rTime;
+    public static float rTime = 10f;
     
     void Start()
     {
-        rTime = 10f;
         text = GetComponent<Text>();
     }
 
@@ -21,7 +20,7 @@ public class TimeLimt : MonoBehaviour
         if (rTime < 0)
         { 
             rTime = 0;
-            ChoiceManager.P_instance.selectedNum = 1;
+            SceneManager.LoadScene("MiFive");
         }
 
         text.text = " " +  Mathf.Round(rTime);

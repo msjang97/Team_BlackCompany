@@ -21,7 +21,7 @@ public class ChoiceManager : MonoBehaviour
         {
             if (null == instance)
             {
-                instance = null;
+                return null;
             }
             return instance;
         }
