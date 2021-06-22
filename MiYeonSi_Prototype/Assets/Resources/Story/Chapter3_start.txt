@@ -69,8 +69,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "그럴까? 안 그래도 타이밍 봐서 적당히 빠지려고 했거든." setBackground(MT_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-
-setMiniGameAfterBG(산책로_2,false,1) playMusic(산책로1)
+playMusic(산책로1)
+setMiniGameAfterBG(산책로_2,false,1) 
 연애세포 "좋아, 둘이 빠져나오는 데 성공! 이제 분위기만 잘 이끌어 가면…" changeExpression(연애세포,연애세포_3,100)
 지찬우 "사실 나 술 잘 못 마시거든… 보니까 너도 좀 취한 것 같길래. 같이 와줘서 고마워." changeExpression(지찬우,지찬우_긴장,100)
 최은지 "아냐, 나도 이렇게 시끄러운 자리 별로 안 좋아해. 나와서 걸으니까 좋다…" changeExpression(최은지,최은지_신나,100)
@@ -149,7 +149,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "풉, 찬우야, 너 연기 진짜 못한다. " setBackground(MT_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(MT_2,false,1) playMusic(MT1)
+playMusic(MT1)
+setMiniGameAfterBG(MT_2,false,1) 
 narrator "자, 이 분위기 그대로~ 한 바퀴 돌고 다음 게임으로!" 
 지찬우 "우욱… 내일 숙취 장난 아니겠다…" changeExpression(지찬우,지찬우_주륵,100)
 최은지 "그러게… 나도 그만 마시고 싶은데..." changeExpression(최은지,최은지_삐질,100)
@@ -170,7 +171,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "어? 이거 물... 찬우야, 고마워…" setBackground(MT_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(MT_2,false,1) playMusic(MT1)
+playMusic(MT1)
+setMiniGameAfterBG(MT_2,false,1) 
 narrator "하하하! 오늘 진짜 재밌다. 야, 너희도 좋지, 좋지?! 좋아, 한 바퀴 더!!! 이번에 걸리면 러브샷이다!"
 사수진 "아… 저런 걸 과대라고…" changeExpression(사수진,사수진_1,100)
 	

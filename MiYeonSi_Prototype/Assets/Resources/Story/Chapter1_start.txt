@@ -54,7 +54,8 @@ miniGame(SaSuJin_MiniGame)
         최은지 "정리? 찬우는 엄청 꼼꼼한 성격이구나. 팀원으로서 든든한데?" setBackground(강의실_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
+playMusic(Class)
+setMiniGameAfterBG(강의실_2,false,1) 
 사수진 "조장은 내가 할게. 다들 괜찮지?" changeExpression(사수진,사수진_0,100)
 최은지 "아무도 안 하면 내가 하려고 했는데 수진이랑 같은 조라서 다행이다. 그래, 잘해보자." changeExpression(최은지,최은지_0,100)
 사수진 "예전부터 이런 건 전부 내가 해서 차라리 이쪽이 마음이 편해." changeExpression(사수진,사수진_0,100)
@@ -74,7 +75,8 @@ miniGame(SaSuJin_MiniGame)
         최은지 "좋아, 다 같이 가면 재밌겠다~ 안 그래도 궁금했거든." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
+playMusic(Class)
+setMiniGameAfterBG(강의실_2,false,1) 
 사수진 "민속촌이나 가자. 제일 무난하니까" changeExpression(사수진,사수진_0,100)
 사수진 "그럼 이번 주 시간 언제 돼? 난 평일은 목요일밖에 시간이 안 될 것 같은데." changeExpression(사수진,사수진_0,100)
 최은지 "그래? 그럼 차라리 주말에 만날까?" changeExpression(최은지,최은지_0,100)
@@ -99,7 +101,8 @@ miniGame(SaSuJin_MiniGame)
         최은지 "맞다, 깜빡할 뻔했네! 그럼 내 번호도 적어 줄게. 폰 이리 줘봐." setBackground(강의실_2,false,1) changeExpression(최은지,최은지_3,100) 
 }
 
-setMiniGameAfterBG(강의실_2,false,1) playMusic(Class)
+playMusic(Class)
+setMiniGameAfterBG(강의실_2,false,1) 
 교수님 "네~ 수업 여기서 마치도록 하구요, 과제 잘해오고 다음 시간 때 봅시다." changeExpression(교수님,교수님_0,100)
 사수진 "…끝났네. 다들 수업 듣느라 고생했어, 토요일 잊지 말고 무슨 일 생기면 미리 연락해." changeExpression(사수진,사수진_0,100)
 최은지 "그래, 나 연강 있어서 먼저 갈게. 토요일에 봐" changeExpression(최은지,최은지_0,100)

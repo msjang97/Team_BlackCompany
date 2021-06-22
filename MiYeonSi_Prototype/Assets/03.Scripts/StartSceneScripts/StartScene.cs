@@ -10,8 +10,9 @@ public class StartScene : MonoBehaviour
         SceneManager.LoadScene("MainSystem");
     }
 
-    public void StartMainMenuScene() // 게임 시작
+    public void StartMainMenuScene() // 메인 메뉴 돌아가기
     {
+        ChoiceManager.P_instance.savedChapterName = "";
         AudioManager.instance.StopSong();
         SceneManager.LoadScene("StartScene");
     }
