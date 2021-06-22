@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Bar : MonoBehaviour
 {
-    private float upLimit = 3;
-    private float downLimit = -3;
+    [SerializeField]
     private float moveSpeed = 15;
+    private float upLimit = 1260;
+    private float downLimit = 425;   
     private int direction = 1;
-
     private bool isStoped = false;
     public bool P_isStoped { get { return isStoped; } }
 
-    private Vector3 BarPosition;
-    public Vector3 P_BarPosition { get { return BarPosition; } }
+    public Vector2 BarPosition;
+    public RectTransform BarTransform;
 
     // Update is called once per frame
     void Update()
     {
         if(isStoped == false)
-            MoveBar();       
+            MoveBar();
     }
 
     private void MoveBar()
@@ -29,15 +29,14 @@ public class Bar : MonoBehaviour
         else if (transform.position.y > upLimit)
             direction = -1;
 
-        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime * direction);
+        BarTransform.Translate(Vector2.up * moveSpeed * Time.deltaTime * direction*100);       
     }
 
     public void StopBar()
     {
         isStoped = true;
-        BarPosition = this.transform.position;
+        BarPosition = BarTransform.position;
         Choice.lovecheck = true;
-        //Set_Lovepoint();
     }
 
    
