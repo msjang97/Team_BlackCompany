@@ -37,10 +37,11 @@ choice
         안하경 "크하하학! 역시 선배 눈은 못 속이지 말입니다." setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
+setMiniGameAfterBG(산책로_2,false,1) playMusic(Sunny)
 안하경 "체력단련을 위해 잠깐 훈련 중이었습니다. 입시에서 가장 중요한 건 체력 아니겠습니까. 껄껄껄!" changeExpression(안하경,안하경_2,100)
 사수진 "하경이? 오랜만이네, 졸업 후에 보는 건 처음인가?" changeExpression(사수진,사수진_미소,100)
 안하경 "수진선배까지? 왜 이런 외진 산골에 선배 둘이 같이 있는 겁니까?" changeExpression(안하경,안하경_0,100)
-지찬우 "우리는 MT 때문에 온 거야. 너 훈련 제법 멀리까지 오는구나." changeExpression(사수진,사수진_0,100)
+지찬우 "우리는 MT 때문에 온 거야. 너 훈련 제법 멀리까지 오는구나." changeExpression(지찬우,지찬우_0,100)
 안하경 "좀 멀긴 해도 역시 강원도보다 좋은 곳을 못 찾았지 말입니다." changeExpression(안하경,안하경_3,100)
 연애세포 "와, 귀여운데 성실하기까지 하네." changeExpression(연애세포,연애세포_1,100)
 사수진 "찬우야, 애들이 찾겠다. 그만 들어가자" changeExpression(사수진,사수진_0,100)
@@ -69,7 +70,7 @@ miniGame(Anhakyung_Minigame) playMusic(Evolution)
 }
 
 
-setBackground(산책로_2,false,1) playMusic(Sunny)
+setMiniGameAfterBG(MT_2,false,1) playMusic(Sunny)
 연애세포 "좋아, 둘이 빠져나오는 데 성공! 이제 분위기만 잘 이끌어 가면…" changeExpression(연애세포,연애세포_3,100)
 지찬우 "사실 나 술 잘 못 마시거든… 보니까 너도 좀 취한 것 같길래. 같이 와줘서 고마워." changeExpression(지찬우,지찬우_긴장,100)
 최은지 "아냐, 나도 이렇게 시끄러운 자리 별로 안 좋아해. 나와서 걸으니까 좋다…" changeExpression(최은지,최은지_신나,100)
@@ -94,7 +95,7 @@ choice
         안하경 "선배… 알면서도 물어보는 심리는 뭡니까. 그걸 꼭 제 입으로… " setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setBackground(산책로_2,false,1) playMusic(Sunny)
+setMiniGameAfterBG(산책로_2,false,1) playMusic(Sunny)
 최은지 "사실 찬우는 학교에서 엄청 조용한 스타일이라서 친한 후배가 있었다고 하니까 조금 궁금하네" changeExpression(최은지,최은지_0,100)
 최은지 "둘이 어떻게 알게 된 사이야?" changeExpression(최은지,최은지_0,100)
 
@@ -110,7 +111,7 @@ choice
         안하경 "선배… 알면서도 물어보는 심리는 뭡니까. 그걸 꼭 제 입으로… " setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setBackground(산책로_2,false,1) playMusic(Sunny)
+setMiniGameAfterBG(산책로_2,false,1) playMusic(Sunny)
 지찬우 "너, 너무 오래 나와 있었나?! 슬슬 들어가야겠다!" changeExpression(지찬우,지찬우_가짜웃음,100)
 최은지 "어? 오랜만에 만난 거 아니야? 더 얘기 안 해도 돼?" changeExpression(최은지,최은지_0,100)
 지찬우 "괘, 괜찮아… 하경아, 그럼 조심히 들어가! 훈련 열심히 하고!" changeExpression(지찬우,지찬우_가짜웃음,100)
@@ -148,7 +149,7 @@ miniGame(Anhakyung_Minigame) playMusic(Evolution)
         최은지 "풉, 찬우야, 너 연기 진짜 못한다. " setBackground(MT_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setBackground(MT_2,false,1) playMusic(Evolution)
+setMiniGameAfterBG(MT_2,false,1) playMusic(Evolution)
 narrator "자, 이 분위기 그대로~ 한 바퀴 돌고 다음 게임으로!" 
 지찬우 "우욱… 내일 숙취 장난 아니겠다…" changeExpression(지찬우,지찬우_주륵,100)
 최은지 "그러게… 나도 그만 마시고 싶은데..." changeExpression(최은지,최은지_삐질,100)
@@ -168,7 +169,7 @@ miniGame(Anhakyung_Minigame) playMusic(Evolution)
         최은지 "어? 이거 물... 찬우야, 고마워…" setBackground(MT_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setBackground(MT_2,false,1) playMusic(Evolution)
+setMiniGameAfterBG(MT_2,false,1) playMusic(Evolution)
 narrator "하하하! 오늘 진짜 재밌다. 야, 너희도 좋지, 좋지?! 좋아, 한 바퀴 더!!! 이번에 걸리면 러브샷이다!"
 사수진 "아… 저런 걸 과대라고…" changeExpression(사수진,사수진_1,100)
 	
