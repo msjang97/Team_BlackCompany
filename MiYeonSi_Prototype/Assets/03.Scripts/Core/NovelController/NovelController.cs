@@ -377,6 +377,7 @@ public class NovelController : MonoBehaviour
                 break;
             case "setForeground":
                 Command_SetLayerImage(data[1], BCFC.instance.foreground);
+                untouchableTime = 2.0f;
                 break;
             case "playSound":
                 Command_PlaySound(data[1]);
@@ -483,8 +484,6 @@ public class NovelController : MonoBehaviour
             }
         }
         layer.TransitionToTexture(tex, spd, smooth);
-
-        untouchableTime = 2.0f;
     }
 
     void Command_PlaySound(string data)

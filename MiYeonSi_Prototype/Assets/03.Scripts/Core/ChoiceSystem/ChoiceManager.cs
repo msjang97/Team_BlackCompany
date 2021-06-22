@@ -62,5 +62,4 @@ public class ChoiceManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f); //애니메이션 재생시간만큼
         SceneManager.LoadScene("MainSystem");
     }
-
 }

@@ -97,6 +97,11 @@ public class SaveData : MonoBehaviour
         tw.Write("SavedBackgroundLine : " + _savedBackgroundLine + "\n");
         tw.Write("SavedPlaySong : " + _savedPlaySong + "\n");
 
+        tw.Write("enji_LovePoint : " + LovePoint.instance.enji_LovePoint + "\n");
+        tw.Write("hagyoung_LovePoint : " + LovePoint.instance.hagyoung_LovePoint + "\n");
+        tw.Write("minseok_LovePoint : " + LovePoint.instance.minseok_LovePoint + "\n");
+        tw.Write("sujin_LovePoint : " + LovePoint.instance.sujin_LovePoint + "\n");
+
         tw.Close();
         fs.Close();
 
@@ -134,6 +139,26 @@ public class SaveData : MonoBehaviour
                 {
                     data = loadData[i].Split(' ', '\n');
                     _savedPlaySong = data[2];
+                }
+                else if (loadData[i].StartsWith("enji_LovePoint : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    LovePoint.instance.enji_LovePoint = int.Parse(data[2]);
+                }
+                else if (loadData[i].StartsWith("hagyoung_LovePoint : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    LovePoint.instance.hagyoung_LovePoint = int.Parse(data[2]);
+                }
+                else if (loadData[i].StartsWith("minseok_LovePoint : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    LovePoint.instance.minseok_LovePoint = int.Parse(data[2]);
+                }
+                else if (loadData[i].StartsWith("sujin_LovePoint : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    LovePoint.instance.sujin_LovePoint = int.Parse(data[2]);
                 }
             }
 
