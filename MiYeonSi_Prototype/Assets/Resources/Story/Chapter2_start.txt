@@ -91,7 +91,8 @@ miniGame(Minseok_Minigame)
         최은지 "하하, 찬우 네가 느린 거 아냐?" setBackground(민속촌_2,false,1) changeExpression(최은지,최은지_3,100)
 }
 
-setMiniGameAfterBG(민속촌_2,false,1) playMusic(FolkVillage)
+playMusic(FolkVillage)
+setMiniGameAfterBG(민속촌_2,false,1) 
 지찬우 "으악, 잡혔다! 역시 이럴 줄 알았…" changeExpression(지찬우,지찬우_당황,100)
 마민석 "어…? 그쪽은…"  changeExpression(마민석,마민석_0,100)
 지찬우 "아, 아저씨는?!" changeExpression(지찬우,지찬우_경악,100)
@@ -141,7 +142,8 @@ miniGame(Minseok_Minigame)
         최은지 "와아, 찬우 최고! 그럼 나 관상가 보고 싶어!" setBackground(카페_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(민속촌_1,false,1) playMusic(FolkVillage)
+playMusic(FolkVillage)
+setMiniGameAfterBG(민속촌_1,false,1) 
 최은지 "아, 재밌었다! 다들 바쁠 텐데 내가 너무 무리해서 끌고 다닌 거 아닌가 몰라. 오늘 같이 구경해줘서 고마워." hangeExpression(최은지,최은지_신나,100)
 
 playMusic(Evolution)
@@ -157,7 +159,8 @@ miniGame(Minseok_Minigame)
         최은지 "정말? 다행이다! 나도 오늘 무지 재밌었어!" setBackground(민속촌_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(민속촌_1,false,1) playMusic(FolkVillage)
+playMusic(FolkVillage)
+setMiniGameAfterBG(민속촌_1,false,1) 
 최은지 "그럼 수업에서 보자! 다들 잘 들어가~" changeExpression(최은지,최은지_0,100)
 지찬우 "으,응…! 조심히 들어가…" changeExpression(지찬우,지찬우_쑥스,100)
 연애세포 "하루 만에 많이 친해졌네. 느낌 좋은데?" changeExpression(연애세포,연애세포_3,100)

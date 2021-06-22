@@ -37,7 +37,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "진짜? 나 그거 보고 싶었는데! 진짜 기대된다~" setBackground(영화관_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(영화관_1,false,1) playMusic(영화관)
+playMusic(영화관)
+setMiniGameAfterBG(영화관_1,false,1) 
 최은지 "어디 보자 시간이… 영화 시작하려면 1시간 정도 남았네. 우리 그때까지 뭐할까?" changeExpression(최은지,최은지_0,100)
 지찬우 "미, 미안.... 내가 시간 생각을 못 해서…" changeExpression(지찬우,지찬우_깜짝,100)
 최은지 "네가 왜 미안해~ 맞다, 아까 올라오면서 봤는데 1층에 오락실 있더라. 혹시 게임 좋아해?" changeExpression(최은지,최은지_0,100)
@@ -55,7 +56,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "좋아! 나 오락실 게임 좋아하거든. 이따 내 실력 보고 놀라지 마~" setBackground(영화관_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(오락실_2,false,1) playMusic(오락실)
+playMusic(오락실)
+setMiniGameAfterBG(오락실_2,false,1) 
 최은지 "진짜 오랜만이다~ 사실 나도 대학교 오고 거의 안 왔거든." changeExpression(최은지,최은지_신나,100)
 지찬우 "나도 오랜만에 오니까 좋네…" changeExpression(지찬우,지찬우_0,100)
 연애세포 "최은지랑 와서 좋은 거겠지." changeExpression(연애세포,연애세포_0,100)
@@ -188,7 +190,8 @@ miniGame(Anhakyung_Minigame)
         최은지 "그치?! 찬우 너 나랑 진짜 잘 맞는 것 같아! 우리 다음에 또 오자! 다음에는 내가 살게! " setBackground(시내_3,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(시내_3,false,1) playMusic(시내대화1)
+playMusic(시내대화1)
+setMiniGameAfterBG(시내_3,false,1) 
 최은지 "어, 버스 온다! 찬우야, 그럼 나 이만 갈게~ 학교에서 보자!" changeExpression(최은지,최은지_0,100)
 지찬우 "응! 조, 조심히 들어가!" changeExpression(지찬우,지찬우_쑥스,100)
 

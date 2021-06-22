@@ -1,6 +1,6 @@
 setForeground(스테이지7,false,1)
 removeForeground()
-setBackground(대학캠퍼스_밤,false,1) playMusic(대학밤3)
+setBackground(대학캠퍼스_밤,false,1) playMusic(대학밤4)
 연애세포 "이야~ 드디어 축젯날이 밝았구만!" changeExpression(연애세포,연애세포_3,100)
 지찬우 "왜 그렇게 들뜬 거야? 난 시끄러운 건 질색인데..." changeExpression(지찬우,지찬우_쭈글,100)
 연애세포 "모르는 소리! 이런 행사에서 잘 보이면 관계 급속 발전하는 거 몰라?" changeExpression(연애세포,연애세포_0,100)
@@ -37,7 +37,7 @@ choice
         사수진 "자기도 무서운 거 싫어하면서… 그래, 열심히 꾸몄으니까 이따 보러 와. " setBackground(대학캠퍼스_,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤3)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤4)
 최은지 "괜찮아, 어차피 우리 학교 애들인데 뭐 얼마나 무섭겠어." changeExpression(최은지,최은지_0,100)
 지찬우 "단둘이 귀신의 집… 이거 완전…" changeExpression(지찬우,지찬우_긴장,100)
 연애세포 "데이트지." changeExpression(연애세포,연애세포_0,100)
@@ -60,7 +60,8 @@ miniGame(SaSuJin_MiniGame)
         최은지 "나 배고픈 거 어떻게 알았어? 좋아! 우리 맛있는 거 먹으러 가자~" setBackground(술집_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤3)
+playMusic(대학밤3)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1) 
 최은지 "아, 배불러~ 애들 생각보다 요리 잘하더라! 진짜 맛있었어." changeExpression(최은지,최은지_4,100)
 지찬우 "마, 맛있었다니 다행이다… 귀신의 집이 이 근처인가? 시간 맞춰서 온 것 같지?" changeExpression(지찬우,지찬우_0,100)
 최은지 "응, 저쪽에서 한다고… 사람들 엄청 많네? 기다려야 하나?" changeExpression(최은지,최은지_당황,100)
@@ -95,12 +96,13 @@ miniGame(SaSuJin_MiniGame)
         최은지 "…그럼 나 손 잡을게. " setBackground(귀신의집_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(귀신의집_2,false,1) playMusic(귀신의집1)
+playMusic(귀신의집1)
+setMiniGameAfterBG(귀신의집_2,false,1) 
 사수진 "둘 다 죽여버릴 거야…" changeExpression(사수진,사수진_1,100)
 지찬우 "으아아아악!!!!!!!!!!" changeExpression(지찬우,지찬우_경악,100)
 최은지 "꺄아아아아아아악!!!!!!!!!!!!!!!!!!" changeExpression(최은지,최은지_뿌엥,100)
 
-setBackground(대학캠퍼스_밤,false,1) playMusic(대학밤3)
+setBackground(대학캠퍼스_밤,false,1) playMusic(대학밤4)
 사수진 "얼씨구, 둘이 온다고 할 때부터 알아봤다. 많이 놀랐어?" changeExpression(사수진,사수진_0,100)
 지찬우 "야… 너는 알면서 그렇게 놀래키는 게 어디 있냐…" changeExpression(지찬우,지찬우_쭈글,100)
 최은지 "그래도 찬우가 있어서 덜 무서웠어. 너희 진짜 잘 꾸몄더라" changeExpression(최은지,최은지_0,100)
@@ -119,7 +121,7 @@ choice
         사수진 "그래? 그럼 다음엔 나랑 진짜 귀신의 집 가자. " setBackground(대학캠퍼스_,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤3)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤4)
 최은지 "수진아, 이거 언제까지 해? 너도 같이 놀면 좋을 텐데…" changeExpression(최은지,최은지_0,100)
 사수진 "나도 그러고 싶은데 사람이 많아서 당분간은 자리 못 비우겠는데. 중간에 나오면 연락할게." changeExpression(사수진,사수진_0,100)
 최은지 "그래? 축젯날 고생이 많네… 그럼 우린 좀 더 둘러보고 있을게. 이따 연락해~" changeExpression(최은지,최은지_0,100)
@@ -144,7 +146,8 @@ miniGame(SaSuJin_MiniGame)
         최은지 "그럴까? 좋아! 우리 내년에도 같이 놀자. " setBackground(귀신의집_2,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(Sunny)
+playMusic(대학밤2)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1) 
 지찬우 "아, 불꽃놀이 시작하겠다! 빨리 가자." changeExpression(지찬우,지찬우_긴장,100)
 최은지 "그래…" changeExpression(최은지,최은지_0,100)
 
