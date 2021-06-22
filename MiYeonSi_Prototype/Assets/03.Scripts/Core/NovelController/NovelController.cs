@@ -15,7 +15,7 @@ public class NovelController : MonoBehaviour
     string playSongName;
     float untouchableTime;
     public bool next_box;
-    public int ch_count; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
+    //public int ch_count = 0; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
 
     public GameObject touch_box;
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
@@ -25,7 +25,7 @@ public class NovelController : MonoBehaviour
     void Awake()
     {
         instance = this;
-        ch_count = 0;
+        //ch_count = 0;
     }
 
     // Start is called before the first frame update
@@ -383,7 +383,7 @@ public class NovelController : MonoBehaviour
                 break;
             case "playMusic":
                 Command_PlayMusic(data[1]);
-                Next(); // 배경음 전환되면서 같이 전환.
+                //Next(); // 배경음 전환되면서 같이 전환.
                 break;
             case "move":
                 Command_MoveCharacter(data[1]);
@@ -445,7 +445,7 @@ public class NovelController : MonoBehaviour
 
     void Command_Load(string chapterName)
     {
-        ch_count++;
+        LovePoint.instance.ch_count++;
         NovelController.instance.LoadChapterFile(chapterName);
         HandleLine(data[0]);
     }
