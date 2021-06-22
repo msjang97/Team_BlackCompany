@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class ChoiceButton : MonoBehaviour
 {
-    public TextMeshProUGUI tmpro;
-    public string text { get { return tmpro.text; } set { tmpro.text = value; } }
+    public Text textA;
+    public string text { get { return textA.text; } set { textA.text = value; } }
 
     [HideInInspector]
     public int choiceIndex = -1;
