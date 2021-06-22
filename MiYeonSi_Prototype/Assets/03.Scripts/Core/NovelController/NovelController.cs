@@ -13,7 +13,7 @@ public class NovelController : MonoBehaviour
     public int lastBackground;
     string _chapterName;
     string playSongName;
-    public float time;
+    float untouchableTime;
     public bool next_box;
     public int ch_count; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
 
@@ -57,12 +57,23 @@ public class NovelController : MonoBehaviour
 
     void Update()
     {
+        UntouchableCheck();
+
         if (next_box)
         {
             Next();
             next_box = false;
         }
         
+    }
+
+    void UntouchableCheck()
+    {
+        if(untouchableTime >= 0.0f)
+        {
+            untouchableTime -= Time.deltaTime;
+            next_box = false;
+        }
     }
 
     bool _next = false;
@@ -473,6 +484,7 @@ public class NovelController : MonoBehaviour
         }
         layer.TransitionToTexture(tex, spd, smooth);
 
+        untouchableTime = 2.0f;
     }
 
     void Command_PlaySound(string data)
