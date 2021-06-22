@@ -396,6 +396,9 @@ public class NovelController : MonoBehaviour
                 Command_removeForeground(data[1]);
                 break;
             case "goEnding":
+                Go_SelectEnding();
+                break;
+            case "goEndingCredit":
                 Go_EndingCredit();
                 break;
         }
@@ -408,6 +411,12 @@ public class NovelController : MonoBehaviour
     void Go_EndingCredit()
     {
         SceneManager.LoadScene("EndingCredit");
+    }
+
+    void Go_SelectEnding()
+    {
+        string SelectEndingName = LovePoint.instance.Choice_EndingScene();
+        Command_Load(SelectEndingName);
     }
 
     void Command_goToStartScene2()

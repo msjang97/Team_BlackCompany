@@ -13,7 +13,7 @@ removeForeground()
 연애세포 "멍청아!!! 최은지 전화라고, 빨리 받아!!!" changeExpression(연애세포,연애세포_2,100)
 지찬우 "어… 그래. 은지… 은지?! 으, 은지라고?! 이, 이리 줘!!!" changeExpression(지찬우,지찬우_당황,100)
 
-narrator(달칵)
+narrator "달칵"
 setForeground(예시일러스트,false,1)
 
 지찬우 "여… 여보세요…" changeExpression(지찬우,지찬우_긴장,100)
