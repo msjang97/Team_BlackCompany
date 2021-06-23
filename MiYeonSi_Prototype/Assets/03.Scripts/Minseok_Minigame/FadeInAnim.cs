@@ -14,21 +14,6 @@ public class FadeInAnim : MonoBehaviour
         Invoke("TestFI", 1.5f);//1.5초뒤 나타나는 코드 실행
     }
 
-    public void Awake()
-    {
-
-    }
-
-    void Update()
-    {
-       
-    }
-
-    void Continue_()
-    {
-
-    }
-
     void TestFI() {
         FadeIn(0.5f);//1초간 나타남
     }
@@ -120,6 +105,7 @@ public class FadeInAnim : MonoBehaviour
             if (tempColor.a <= 0f){
                 tempColor.a = 0f;// 버튼의 투명도가 0 이하로 갔는가
                 tempTextColor.a = 0f; //텍스트의 투명도가 0이하로 갔는가
+                Button1.buttonInstance.isDone = false;
             }
             
             yield return null;

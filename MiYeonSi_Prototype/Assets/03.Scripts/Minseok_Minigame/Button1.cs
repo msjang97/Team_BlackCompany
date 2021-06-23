@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class Button1 : MonoBehaviour
 {
     public GameObject[] Buttons = new GameObject[4];
-    
+    static public Button1 buttonInstance;
     private float time = 0;
 
-
+    public bool isDone = false;
     public int ButtonX ; //-170~186
     public int Button1Y; // 
     public int Button2Y; // 
@@ -21,21 +21,18 @@ public class Button1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        buttonInstance = this;
     }
-
 
     // Update is called once per frame
     void Update()
-    {      
-        if (time < 0.5f)
-        {    
-        }
-
-        else if (time > 0.5f)
+    {   
+        if (isDone == false)
         {
-            getRandomInt(4, 0, 4);          
-            Invoke("ResetTime", 1.0f);                
+            getRandomInt(4, 0, 4);
+            isDone = true;
+            Invoke("ResetTime", 1.5f);
+
         }
         time += Time.deltaTime;
     }
@@ -63,18 +60,14 @@ public class Button1 : MonoBehaviour
                 if (!isSame) break;
             }
         }
-
         for (int i = 0; i < length; i++)
-        {
+        {          
             movePos(randArray[i], Buttons[i]); 
         }
-       
     }
-
 
     private void ResetTime()
     {
-        //this.gameObject.SetActive(true);
         time = 0;
     }
 
@@ -86,34 +79,31 @@ public class Button1 : MonoBehaviour
 
     public void movePos(int ranNum, GameObject gameObject)
     {
+
         if (ranNum == 0)
         {
-            //gameObject.transform.localPosition = new Vector3(0.0f, 370.0f, 0.0f);
             ButtonX = Random.Range(-170, 186);
-            Button1Y= Random.Range(500, 710); // 500 ~ 710 210
+            Button1Y = Random.Range(200, 410); // 500 ~ 710 210
             gameObject.transform.localPosition = new Vector3(ButtonX, Button1Y, 0.0f);
         }
 
         else if (ranNum == 1)
         {
-            //gameObject.transform.localPosition = new Vector3(0.0f, 150.0f, 0.0f);
             ButtonX = Random.Range(-170, 186);
-            Button2Y = Random.Range(110, 320);// 110 ~ 320 210
+            Button2Y = Random.Range(-210, 20);// 110 ~ 320 210
             gameObject.transform.localPosition = new Vector3(ButtonX, Button2Y, 0.0f);
         }
         else if (ranNum == 2)
         {
-            //gameObject.transform.localPosition = new Vector3(0.0f, -70.0f, 0.0f);
             ButtonX = Random.Range(-170, 186);
-            Button3Y = Random.Range(-280, -70); // -280 ~ -70 210
+            Button3Y = Random.Range(-500, -370); // -280 ~ -70 210
             gameObject.transform.localPosition = new Vector3(ButtonX, Button3Y, 0.0f);
         }
 
         else if (ranNum == 3)
         {
-            //gameObject.transform.localPosition = new Vector3(0.0f, -290.0f, 0.0f);
             ButtonX = Random.Range(-170, 186);
-            Button4Y = Random.Range(-670, -460); // -670 ~ -460 210
+            Button4Y = Random.Range(-820, -700); // -670 ~ -460 210
             gameObject.transform.localPosition = new Vector3(ButtonX, Button4Y, 0.0f);
         }
     }
