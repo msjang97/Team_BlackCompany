@@ -1,6 +1,6 @@
 setForeground(스테이지6,false,1)
 removeForeground()
-setBackground(영화관_1,false,1) playMusic(영화관)
+setBackground(영화관_1,false,1) playMusic(영화관1)
 지찬우 "…너무 일찍 왔나?" changeExpression(지찬우,지찬우_긴장,100)
 연애세포 "지찬우! 지찬우! 지찬우 넌 천재야! 맨날 말까지 더듬던 애가 어떻게 그렇게 거짓말을 술술 했지?" changeExpression(연애세포,연애세포_3,100)
 연애세포 "귀여운 녀석! 기분이다! 이제 하산해도 좋아!" changeExpression(연애세포,연애세포_3,100)
@@ -37,7 +37,7 @@ miniGame(Anhakyung_Minigame)
         최은지 "진짜? 나 그거 보고 싶었는데! 진짜 기대된다~" setBackground(영화관_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-playMusic(영화관)
+playMusic(영화관1)
 setMiniGameAfterBG(영화관_1,false,1) 
 최은지 "어디 보자 시간이… 영화 시작하려면 1시간 정도 남았네. 우리 그때까지 뭐할까?" changeExpression(최은지,최은지_0,100)
 지찬우 "미, 미안.... 내가 시간 생각을 못 해서…" changeExpression(지찬우,지찬우_깜짝,100)
@@ -89,7 +89,8 @@ choice
         안하경 "선배의 이런 시원시원한 면이 좋습니다… 여전하지 말입니다. " setBackground(오락실_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setMiniGameAfterBG(오락실_2,false,1) playMusic(오락실)
+playMusic(오락실)
+setMiniGameAfterBG(오락실_2,false,1) 
 최은지 "어? 찬우… 학교 후배였던가?" changeExpression(최은지,최은지_삐질,100)
 안하경 "안하경입니다. 저도 그쪽 이름 모르니 그냥 넘어가겠습니다." changeExpression(안하경,안하경_0,100)
 최은지 "난 최은지야. 만난 것도 인연인데 같이 놀다 갈래? 사람 많으면 더 재밌잖아~" changeExpression(최은지,최은지_0,100)
@@ -114,8 +115,8 @@ choice
         안하경 "…평소 직업 특성상 총을 자주 잡다 보니 감정이 격해졌습니다. 죄송하게 됐지 말입니다." setBackground(오락실_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-
-setMiniGameAfterBG(오락실_2,false,1) playMusic(오락실)
+playMusic(오락실)
+setMiniGameAfterBG(오락실_2,false,1) 
 안하경 "재미있는 제안 하나 해도 되겠습니까. 우리 둘이 대결해서 제가 이기면 찬우 선배가 제 소원을 들어주기로." changeExpression(안하경,안하경_0,100)
 최은지 "뭐? 그럼 내가 이기면?" changeExpression(최은지,최은지_당황,100)
 안하경 "그럴 일은 없을 것 같지만… 만약 제가 지면 제가 찬우 선배 소원을 들어드리겠습니다." changeExpression(안하경,안하경_2,100)
@@ -156,7 +157,8 @@ choice
         안하경 "…그렇습니다. 평소의 저답지 않았습니다. 그냥 없던 말로 하겠습니다. " setBackground(오락실_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setMiniGameAfterBG(영화관_1,false,1) playMusic(영화관2)
+playMusic(영화관2)
+setMiniGameAfterBG(영화관_1,false,1) 
 최은지 "아, 영화 곧 시작하겠다! 찬우야, 빨리 가자!" changeExpression(최은지,최은지_0,100)
 안하경 "…영화? 분명히 영화관은 그냥 지나가던 길이라고…" changeExpression(안하경,안하경_0,100)
 지찬우 "그, 그러게! 하경아, 우리 먼저 갈게. 다음에 보자!!!" changeExpression(지찬우,지찬우_0,100)

@@ -37,7 +37,8 @@ choice
         안하경 "크하하학! 역시 선배 눈은 못 속이지 말입니다." setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setMiniGameAfterBG(산책로_2,false,1) playMusic(산책로2)
+playMusic(산책로2)
+setMiniGameAfterBG(산책로_2,false,1) 
 안하경 "체력단련을 위해 잠깐 훈련 중이었습니다. 입시에서 가장 중요한 건 체력 아니겠습니까. 껄껄껄!" changeExpression(안하경,안하경_2,100)
 사수진 "하경이? 오랜만이네, 졸업 후에 보는 건 처음인가?" changeExpression(사수진,사수진_미소,100)
 안하경 "수진선배까지? 왜 이런 외진 산골에 선배 둘이 같이 있는 겁니까?" changeExpression(안하경,안하경_0,100)
@@ -95,7 +96,8 @@ choice
         안하경 "선배… 알면서도 물어보는 심리는 뭡니까. 그걸 꼭 제 입으로… " setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setMiniGameAfterBG(산책로_2,false,1) playMusic(산책로1)
+playMusic(산책로1)
+setMiniGameAfterBG(산책로_2,false,1) 
 최은지 "사실 찬우는 학교에서 엄청 조용한 스타일이라서 친한 후배가 있었다고 하니까 조금 궁금하네" changeExpression(최은지,최은지_0,100)
 최은지 "둘이 어떻게 알게 된 사이야?" changeExpression(최은지,최은지_0,100)
 
@@ -111,7 +113,8 @@ choice
         안하경 "선배… 알면서도 물어보는 심리는 뭡니까. 그걸 꼭 제 입으로… " setBackground(산책로_2,false,1) changeExpression(안하경,안하경_3,100)
 }
 
-setMiniGameAfterBG(산책로_2,false,1) playMusic(산책로1)
+playMusic(산책로1)
+setMiniGameAfterBG(산책로_2,false,1) 
 지찬우 "너, 너무 오래 나와 있었나?! 슬슬 들어가야겠다!" changeExpression(지찬우,지찬우_가짜웃음,100)
 최은지 "어? 오랜만에 만난 거 아니야? 더 얘기 안 해도 돼?" changeExpression(최은지,최은지_0,100)
 지찬우 "괘, 괜찮아… 하경아, 그럼 조심히 들어가! 훈련 열심히 하고!" changeExpression(지찬우,지찬우_가짜웃음,100)
