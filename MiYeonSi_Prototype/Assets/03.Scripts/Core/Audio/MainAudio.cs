@@ -25,6 +25,7 @@ public class MainAudio : MonoBehaviour
     }
     private void Awake()
     {
+        
     }
 
     private void Start()

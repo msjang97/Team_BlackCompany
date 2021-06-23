@@ -64,7 +64,7 @@ public class AudioManager : MonoBehaviour
         }  
     }    
 
-    public void PlaySong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0f, bool PlayOnStart = true, bool loop = true)
+    public void PlaySong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0.5f, bool PlayOnStart = true, bool loop = true)
     {
         if (song != null)
         {
