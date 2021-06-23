@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/MiniGames/Minseok_Minigame.unity
     guid: 26ed3274fb1f07a40880d3a8500cceb0
+  - enabled: 1
+    path: Assets/01.Scenes/EndingCredit.unity
+    guid: c3b457627dbc32944887314477defd15
   m_configObjects: {}
