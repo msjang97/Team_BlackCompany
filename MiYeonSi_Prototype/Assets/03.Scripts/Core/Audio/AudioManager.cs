@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    private int count = 0;
     public static AudioManager instance;
 
     public static SONG activeSong = null;
@@ -78,12 +79,15 @@ public class AudioManager : MonoBehaviour
             //    }
             //}
             //if (activeSong == null || activeSong.clip != song)
-                activeSong = new SONG(song, maxVolume, pitch, startingVolume, PlayOnStart, loop);
+            if(count >= 1)
+                activeSong.DestorySong();
+            activeSong = new SONG(song, maxVolume, pitch, startingVolume, PlayOnStart, loop);
+            count += 1;
         }
 
         else
             activeSong = null;
-
+      
         //StopAllCoroutines();
         //StartCoroutine(VolumeLeveling()); 
     }
@@ -94,9 +98,10 @@ public class AudioManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
     }*/
 
-    /*bool TransitionSongs()
+    /*private void TransitionSongs()
     {
-        bool anyValueChanged = false;
+        activeSong.DestorySong();
+        /*bool anyValueChanged = false;
 
        float speed = songTransitionSpeed * Time.deltaTime;
         for (int i = allSongs.Count - 1; i >= 0; i--)
