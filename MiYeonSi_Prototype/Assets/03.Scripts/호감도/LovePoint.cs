@@ -79,7 +79,7 @@ public class LovePoint : MonoBehaviour
             }
         }
 
-        SaveData.P_instance.SaveAndLoadEndingData("EndingName");
+        SaveData.P_instance.SaveAndLoadEndingData(EndingName);
         return EndingName;
     }
 }

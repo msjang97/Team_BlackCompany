@@ -84,17 +84,17 @@ public class AudioManager : MonoBehaviour
         else
             activeSong = null;
 
-        StopAllCoroutines();
-        StartCoroutine(VolumeLeveling()); 
+        //StopAllCoroutines();
+        //StartCoroutine(VolumeLeveling()); 
     }
 
-    IEnumerator VolumeLeveling()
+    /*IEnumerator VolumeLeveling()
     {
         while (TransitionSongs())
             yield return new WaitForEndOfFrame();
-    }
+    }*/
 
-    bool TransitionSongs()
+    /*bool TransitionSongs()
     {
         bool anyValueChanged = false;
 
@@ -130,7 +130,7 @@ public class AudioManager : MonoBehaviour
 
 
         return anyValueChanged;
-    }
+    }*/
 
     public static AudioSource CreateNewSource(string _name)
     {

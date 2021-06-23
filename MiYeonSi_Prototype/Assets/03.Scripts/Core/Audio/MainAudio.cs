@@ -7,8 +7,7 @@ public class MainAudio : MonoBehaviour
 {
     public GameObject title;
 
-
-    private AudioSource audio;
+    private new AudioSource audio;
 
     bool check = false; 
 
@@ -37,8 +36,7 @@ public class MainAudio : MonoBehaviour
     }
 
     private void Update()
-    {
-
+    {      
         if (SceneManager.GetActiveScene().name == "StartScene")
         {
             if (title.activeSelf == true)
@@ -56,5 +54,4 @@ public class MainAudio : MonoBehaviour
             audio.Stop();
      
     }
-
 }
