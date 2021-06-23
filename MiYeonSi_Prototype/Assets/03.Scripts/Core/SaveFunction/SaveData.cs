@@ -52,7 +52,14 @@ public class SaveData : MonoBehaviour
         set { _isLoadData = value; }
     }
 
+    private Dictionary<string, bool> _endingCollection;
+    public Dictionary<string, bool> EndingCollection
+    {
+        get { return _endingCollection; }
+    }
+
     string dataPath;
+    string endingDataPath;
 
     private void Awake()
     {
@@ -68,7 +75,6 @@ public class SaveData : MonoBehaviour
 
         dataPath = Application.dataPath + "/05.SaveData/SaveData.txt";
 
-        // 이 부분은 테스트를 위해서 사용했고, 나중에 이어하기 할 데이터가 없으면 UI내의 경고창으로 대체할 예정
         FileInfo dataFile = new FileInfo(dataPath);
         if (!dataFile.Exists)
         {
@@ -78,6 +84,11 @@ public class SaveData : MonoBehaviour
         _chapterName = "";
         _savedChapterProgress = 0;
         _isLoadData = false;
+
+        endingDataPath = Application.dataPath + "/05.SaveData/EndingData.txt";
+
+        SaveAndLoadEndingData("");
+        
     }
 
 
@@ -93,10 +104,11 @@ public class SaveData : MonoBehaviour
         FileStream fs = dataFile.Create();
         TextWriter tw = new StreamWriter(fs);
         tw.Write("ChapterName : " + _chapterName + "\n");
-        tw.Write("ChapterProgress : " + _savedChapterProgress + "\n"); 
+        tw.Write("ChapterProgress : " + _savedChapterProgress + "\n");
         tw.Write("SavedBackgroundLine : " + _savedBackgroundLine + "\n");
         tw.Write("SavedPlaySong : " + _savedPlaySong + "\n");
 
+        tw.Write("ch_count : " + LovePoint.instance.ch_count + "\n");
         tw.Write("enji_LovePoint : " + LovePoint.instance.enji_LovePoint + "\n");
         tw.Write("hagyoung_LovePoint : " + LovePoint.instance.hagyoung_LovePoint + "\n");
         tw.Write("minseok_LovePoint : " + LovePoint.instance.minseok_LovePoint + "\n");
@@ -140,6 +152,11 @@ public class SaveData : MonoBehaviour
                     data = loadData[i].Split(' ', '\n');
                     _savedPlaySong = data[2];
                 }
+                else if (loadData[i].StartsWith("ch_count : "))
+                {
+                    data = loadData[i].Split(' ', '\n');
+                    LovePoint.instance.ch_count = int.Parse(data[2]);
+                }
                 else if (loadData[i].StartsWith("enji_LovePoint : "))
                 {
                     data = loadData[i].Split(' ', '\n');
@@ -169,5 +186,43 @@ public class SaveData : MonoBehaviour
             string errorMessage = "ERR! File " + dataPath + " does not exist!";
             Debug.LogError(errorMessage);
         }
+    }
+
+    public void SaveAndLoadEndingData(string endingName)
+    {
+        _endingCollection = new Dictionary<string, bool>();
+
+        if (File.Exists(endingDataPath))
+        {
+            string[] loadData = File.ReadAllLines(endingDataPath);
+            for (int i = 0; i < loadData.Length; i++)
+            {
+                string[] data = null;
+                // 딕셔너리에 데이터 추가.
+                data = loadData[i].Split('\n');
+                _endingCollection.Add(data[0], true);
+            }
+        }
+        else
+        {
+            string message = "File " + dataPath + " does not exist!";
+            Debug.Log(message);
+        }
+
+        if (!_endingCollection.ContainsKey(endingName))
+            _endingCollection.Add(endingName, true);
+
+        FileInfo dataFile = new FileInfo(endingDataPath);
+
+        FileStream fs = dataFile.Create();
+        TextWriter tw = new StreamWriter(fs);
+
+        foreach (var ending in _endingCollection)
+            if (ending.Key != "")
+                tw.Write(ending.Key + "\n");
+
+        tw.Close();
+        fs.Close();
+
     }
 }

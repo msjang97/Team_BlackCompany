@@ -27,14 +27,6 @@ public class LovePoint : MonoBehaviour
     public int hagyoung_LovePoint = 0; // 안하경 호감도
     public int minseok_LovePoint = 0; // 마민석 호감도
 
-
-
-    public bool enji_end = true;
-    public bool minseok_end = false;
-    public bool sujin_end = false;
-    public bool hagyong_end = false;
-    public bool solo_end = false;
-
     public void Distr_LovePoint_Cal(int point) //방해자 점수 정리해주는 함수 - 챕터 별 방해자 한테 선택지 점수 넘겨주기
     {
         // 챕터 카운트를 가져와서 각각 챕터의 방해자에게 호감도 넣어주기 (사수진-1,4 ,7 / 안하경-3,6  / 마민석-2 ,5)
@@ -87,6 +79,7 @@ public class LovePoint : MonoBehaviour
             }
         }
 
+        SaveData.P_instance.SaveAndLoadEndingData("EndingName");
         return EndingName;
     }
 }
