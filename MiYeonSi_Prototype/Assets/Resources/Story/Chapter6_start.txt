@@ -1,6 +1,6 @@
 setForeground(스테이지6,false,1)
 removeForeground()
-setBackground(영화관_1,false,1) playMusic(영화관)
+setBackground(영화관_1,false,1) playMusic(영화관1)
 지찬우 "…너무 일찍 왔나?" changeExpression(지찬우,지찬우_긴장,100)
 연애세포 "지찬우! 지찬우! 지찬우 넌 천재야! 맨날 말까지 더듬던 애가 어떻게 그렇게 거짓말을 술술 했지?" changeExpression(연애세포,연애세포_3,100)
 연애세포 "귀여운 녀석! 기분이다! 이제 하산해도 좋아!" changeExpression(연애세포,연애세포_3,100)
@@ -37,7 +37,7 @@ miniGame(Anhakyung_Minigame)
         최은지 "진짜? 나 그거 보고 싶었는데! 진짜 기대된다~" setBackground(영화관_1,false,1) changeExpression(최은지,최은지_4,100)
 }
 
-playMusic(영화관)
+playMusic(영화관1)
 setMiniGameAfterBG(영화관_1,false,1) 
 최은지 "어디 보자 시간이… 영화 시작하려면 1시간 정도 남았네. 우리 그때까지 뭐할까?" changeExpression(최은지,최은지_0,100)
 지찬우 "미, 미안.... 내가 시간 생각을 못 해서…" changeExpression(지찬우,지찬우_깜짝,100)
