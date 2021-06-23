@@ -36,7 +36,8 @@ choice
         마민석 "그렇게 말하면 전혀 설득력이 없는데요~ 솔직하지 못하군요♡" setBackground(카페_2,false,1) changeExpression(마민석,마민석_3,100)
 }
 
-setMiniGameAfterBG(카페_2,false,1) playMusic(카페1)
+playMusic(카페1)
+setMiniGameAfterBG(카페_2,false,1) 
 최은지 "어? 찬우 아는 분이야? 음… 근데 어디서 봤던 것 같은데…" changeExpression(최은지,최은지_당황,100)
 지찬우 "으, 은지야! 메뉴 골랐어?" changeExpression(지찬우,지찬우_가짜웃음,100)
 최은지 "아니, 아직 고민 중… 아~ 매번 카페 올 때마다 고민하는 거 힘드네…" changeExpression(최은지,최은지_삐질,100)
@@ -133,7 +134,8 @@ choice
         마민석 "이상한 거라뇨? 그냥 평범한 케이크랍니다♡ 맛있으니 어서 드셔보세요… 우훗♡" setBackground(카페_2,false,1) changeExpression(마민석,마민석_3,100)
 }
 
-setMiniGameAfterBG(카페_1,false,1) playMusic(카페1)
+playMusic(카페1)
+setMiniGameAfterBG(카페_1,false,1) 
 최은지 "엄청 친절하시다. 누구야?" changeExpression(최은지,최은지_0,100)
 지찬우 "어? …아, 아빠 회사 친구?" changeExpression(지찬우,지찬우_깜짝,100)
 최은지 "응…? 너희 아빠도 여기서 일하셔?" changeExpression(최은지,최은지_0,100)

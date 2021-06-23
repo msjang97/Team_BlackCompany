@@ -91,7 +91,8 @@ choice
         사수진 "그냥 평소처럼 하면 돼. 이제 와서 네가 내 친구라는 사실은 변하지 않아. 내가 널 언제부터 좋아했다고 생각해?" setBackground(술집_1,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(술집_1,false,1) playMusic(술집1) 
+playMusic(술집1)
+setMiniGameAfterBG(술집_1,false,1) 
 사수진 "찬우야, 진짜 자신 있어? 은지는 그냥 포기하는 게 어때?" changeExpression(사수진,사수진_0,100)
 연애세포 "저 얼굴로 말하니까 진짜 재수 없네…" changeExpression(연애세포,연애세포_0,100)
 지찬우 "체할 것 같아…" changeExpression(지찬우,지찬우_경악,100)
@@ -118,7 +119,8 @@ choice
         사수진 "어떡하긴, 그냥 아무 일 없었던 것처럼 해." setBackground(술집_1,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(술집_1,false,1) playMusic(술집1) 
+playMusic(술집1) 
+setMiniGameAfterBG(술집_1,false,1) 
 최은지 "어? 음식 벌써 나왔네? 맛있겠다! 나 알바하느라 저녁도 못 먹었거든~" changeExpression(최은지,최은지_신나,100)
 사수진 "배고프겠네, 많이 먹어." changeExpression(사수진,사수진_0,100)
 최은지 "응! 잘 먹겠습니다~" changeExpression(최은지,최은지_신나,100)

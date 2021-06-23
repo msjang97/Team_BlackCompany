@@ -37,7 +37,8 @@ choice
         사수진 "자기도 무서운 거 싫어하면서… 그래, 열심히 꾸몄으니까 이따 보러 와. " setBackground(대학캠퍼스_,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤4)
+playMusic(대학밤4)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1) 
 최은지 "괜찮아, 어차피 우리 학교 애들인데 뭐 얼마나 무섭겠어." changeExpression(최은지,최은지_0,100)
 지찬우 "단둘이 귀신의 집… 이거 완전…" changeExpression(지찬우,지찬우_긴장,100)
 연애세포 "데이트지." changeExpression(연애세포,연애세포_0,100)
@@ -121,7 +122,8 @@ choice
         사수진 "그래? 그럼 다음엔 나랑 진짜 귀신의 집 가자. " setBackground(대학캠퍼스_,false,1) changeExpression(사수진,사수진_3,100)
 }
 
-setMiniGameAfterBG(대학캠퍼스_밤,false,1) playMusic(대학밤4)
+playMusic(대학밤4)
+setMiniGameAfterBG(대학캠퍼스_밤,false,1)
 최은지 "수진아, 이거 언제까지 해? 너도 같이 놀면 좋을 텐데…" changeExpression(최은지,최은지_0,100)
 사수진 "나도 그러고 싶은데 사람이 많아서 당분간은 자리 못 비우겠는데. 중간에 나오면 연락할게." changeExpression(사수진,사수진_0,100)
 최은지 "그래? 축젯날 고생이 많네… 그럼 우린 좀 더 둘러보고 있을게. 이따 연락해~" changeExpression(최은지,최은지_0,100)
