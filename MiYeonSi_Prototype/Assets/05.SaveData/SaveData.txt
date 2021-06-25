@@ -1,9 +1,9 @@
-ChapterName : Chapter0_start
-ChapterProgress : 30
-SavedBackgroundLine : 30
-SavedPlaySong : Title
-ch_count : 0
-enji_LovePoint : 0
+ChapterName : Chapter2_start
+ChapterProgress : 85
+SavedBackgroundLine : 85
+SavedPlaySong : FolkVillage
+ch_count : 2
+enji_LovePoint : -12
 hagyoung_LovePoint : 0
-minseok_LovePoint : 0
-sujin_LovePoint : 0
+minseok_LovePoint : -10
+sujin_LovePoint : -5
