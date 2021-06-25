@@ -179,7 +179,7 @@ miniGame(SaSuJin_MiniGame)
         사수진 "안 그래도 그러려고 했어. 너도 조심히 들어가. 이상한 사람 따라가지 말고." setBackground(시내_3,false,1) changeExpression(최은지,최은지_0,100)
     "집 잘 찾아갈 수 있겠어? 데리러 오는 사람 있어? ."
         최은지 "데리러 오는 사람은 없는데… 괜찮아, 나 술 마시고 집 못 찾아간 적 한 번도 없어." setBackground(시내_3,false,1) changeExpression(최은지,최은지_2,100)
-    "  은지야, 집 근처까지만 나랑 같이 가자. 내가 걱정돼서 그래. "
+    "은지야, 집 근처까지만 나랑 같이 가자. 내가 걱정돼서 그래. "
         최은지 "어? 너희 집 반대 방향 아니야? 그럼 내가 너무 미안한데… 마음만 받을게" setBackground(시내_3,false,1) changeExpression(최은지,최은지_4,100)
 }
 

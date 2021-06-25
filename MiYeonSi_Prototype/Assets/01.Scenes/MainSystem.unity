@@ -301,7 +301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: a410be86fdac06c468f946e3b71d03b2, type: 2}
+  m_fontAsset: {fileID: 0}
   m_spriteAsset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 2103686, guid: c41005c129ba4d66911b75229fd70b45, type: 2}
@@ -1024,7 +1024,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a410be86fdac06c468f946e3b71d03b2, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 8827513718036495429, guid: a410be86fdac06c468f946e3b71d03b2,
     type: 2}
   m_fontSharedMaterials: []
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 55901427ae277424b9747ae01783f2dc, type: 3}
+  m_Texture: {fileID: 2800000, guid: f9bd8e7a14732c94ab6acba5b7cd5187, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2252,11 +2252,6 @@ MonoBehaviour:
   sujin_LovePoint: 0
   hagyoung_LovePoint: 0
   minseok_LovePoint: 0
-  enji_end: 1
-  minseok_end: 0
-  sujin_end: 0
-  hagyong_end: 0
-  solo_end: 0
 --- !u!1 &1046882563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,7 +4043,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a410be86fdac06c468f946e3b71d03b2, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 8827513718036495429, guid: a410be86fdac06c468f946e3b71d03b2,
     type: 2}
   m_fontSharedMaterials: []
