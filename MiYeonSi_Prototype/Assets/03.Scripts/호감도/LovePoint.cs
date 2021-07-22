@@ -5,27 +5,53 @@ using UnityEngine;
 public class LovePoint : MonoBehaviour
 {
     public static LovePoint instance = null;
+    public static LovePoint P_instance
+    {
+        get
+        {
+            if (null == instance)
+            {
+                instance = null;
+            }
+            return instance;
+        }
+    }
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
-            if (instance != this)
-                Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
+    private void Start()
+    {
+        Init();
+    }
+
+    public bool goEnd;
     public int ch_count = 0; //챕터 카운트 (0: 프롤로그 , 1: 챕터1 ~ 7: 챕터7)
 
     public int enji_LovePoint = 0; // 최은지 호감도
     public int sujin_LovePoint = 0; // 사수진 호감도
     public int hagyoung_LovePoint = 0; // 안하경 호감도
     public int minseok_LovePoint = 0; // 마민석 호감도
+    public int end_num = 0;
+
+
+    void Init()
+    {
+        enji_LovePoint = 0; // 최은지 호감도
+        sujin_LovePoint = 0; // 사수진 호감도
+        hagyoung_LovePoint = 0; // 안하경 호감도
+        minseok_LovePoint = 0; // 마민석 호감도
+    }
 
     public void Distr_LovePoint_Cal(int point) //방해자 점수 정리해주는 함수 - 챕터 별 방해자 한테 선택지 점수 넘겨주기
     {
@@ -82,4 +108,6 @@ public class LovePoint : MonoBehaviour
         SaveData.P_instance.SaveAndLoadEndingData(EndingName);
         return EndingName;
     }
+
+
 }

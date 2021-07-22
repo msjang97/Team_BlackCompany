@@ -16,11 +16,11 @@ public class NovelController : MonoBehaviour
     float untouchableTime;
     public bool next_box;
     //public int ch_count = 0; // 현재 몇 챕터확인 변수 (0:프롤로그 , 1:챕터_1 등등)
-
     public GameObject touch_box;
     /// <summary> The lines of data loaded directly from a chapter file. /// </summary>
     List<string> data = new List<string>();
     /// <summary> The progress in the current data list. /// </summary>
+
 
     void Awake()
     {
@@ -41,18 +41,50 @@ public class NovelController : MonoBehaviour
             return;
         }
 
-        if (ChoiceManager.P_instance.savedChapterName == "") //처음 시작할때만 
+        if (ChoiceManager.P_instance.savedChapterName == "" )//&& !LovePoint.instance.goEnd) //처음 시작할때만 
         {
             _chapterName = "Chapter0_start";
         }
+        
         else
         {
-            _chapterName = ChoiceManager.P_instance.savedChapterName;
+            if (LovePoint.instance.goEnd)
+            {
+                switch (LovePoint.instance.end_num)
+                {
+                    case 0:
+                        _chapterName = "Enji_Ending";
+                        break;
+                    case 1:
+                        _chapterName = "Sujin_Ending";
+                        break;
+                    case 2:
+                        _chapterName = "Hakyung_Ending";
+                        break;
+                    case 3:
+                        _chapterName = "Minseok_Ending";
+                        break;
+                    case 4:
+                        _chapterName = "Solo_Ending";
+                        break;
+                    default:
+                        break;
+                }
 
-            isAfterMiniGame = true;
+                LovePoint.instance.goEnd = false;
+            }
+
+            else
+            {
+                _chapterName = ChoiceManager.P_instance.savedChapterName;
+
+                isAfterMiniGame = true;
+            }
+           
         }
 
         LoadChapterFile(_chapterName);
+        
     }
 
     void Update()
@@ -407,6 +439,9 @@ public class NovelController : MonoBehaviour
             case "removeForeground":
                 Command_removeForeground(data[1]);
                 break;
+            case "countEnd":
+                Choice_EndingScene_R();
+                break;
             case "goEnding":
                 Go_SelectEnding();
                 break;
@@ -415,6 +450,7 @@ public class NovelController : MonoBehaviour
                 break;
         }
     }
+
     void Go_start()
     {
         SceneManager.LoadScene("StartScene");
@@ -426,9 +462,10 @@ public class NovelController : MonoBehaviour
     }
 
     void Go_SelectEnding()
-    {
-        string SelectEndingName = LovePoint.instance.Choice_EndingScene();
-        Command_Load(SelectEndingName);
+    {       
+        LovePoint.instance.goEnd = true;      
+        SceneManager.LoadScene("MainSystem");
+       
     }
 
     void Command_goToStartScene2()
@@ -456,6 +493,86 @@ public class NovelController : MonoBehaviour
         string texName = data;
         Texture2D tex = texName == "null" ? null : Resources.Load("Images/UI/Backdrops/" + texName) as Texture2D;
         BCFC.instance.foreground.RemoveActiveImage(tex);
+        Next();
+    }
+
+    public void Choice_EndingScene_R()
+    {
+        string EndingName = "";
+
+    
+        if (LovePoint.instance.enji_LovePoint >= 85)
+        {
+            LovePoint.instance.end_num = 0; //enji
+            EndingName = "Enji_Ending";
+        }
+        else
+        {       
+            int higherPoint = LovePoint.instance.sujin_LovePoint;
+
+            if (higherPoint < LovePoint.instance.hagyoung_LovePoint)
+            {
+                higherPoint = LovePoint.instance.hagyoung_LovePoint;
+                
+                if (higherPoint < LovePoint.instance.minseok_LovePoint)
+                {
+                    higherPoint = LovePoint.instance.minseok_LovePoint;
+                    LovePoint.instance.end_num = 3; // minseok
+                    EndingName = "Minseok_Ending";
+                }
+                else if(higherPoint > LovePoint.instance.minseok_LovePoint)
+                {
+                    higherPoint = LovePoint.instance.hagyoung_LovePoint;
+                    LovePoint.instance.end_num = 2; // hagyong
+                    EndingName = "Hakyung_Ending";
+                }
+
+                else if (higherPoint == LovePoint.instance.minseok_LovePoint)
+                {
+                    LovePoint.instance.end_num = 4; // solo
+                    EndingName = "Solo_Ending";
+                }
+            }
+
+            else if (higherPoint > LovePoint.instance.hagyoung_LovePoint)
+            {               
+                if (higherPoint > LovePoint.instance.minseok_LovePoint)
+                {
+                    higherPoint = LovePoint.instance.sujin_LovePoint;
+                    LovePoint.instance.end_num = 1; // sujin
+                    EndingName = "Sujin_Ending";
+                }
+                else if(higherPoint < LovePoint.instance.minseok_LovePoint)
+                {
+                    higherPoint = LovePoint.instance.minseok_LovePoint;
+                    LovePoint.instance.end_num = 3; // minseok
+                    EndingName = "Minseok_Ending";
+                }
+
+                else if (higherPoint == LovePoint.instance.minseok_LovePoint)
+                {
+                    LovePoint.instance.end_num = 4; // solo
+                    EndingName = "Solo_Ending";
+                }
+            }
+
+            else if (higherPoint == LovePoint.instance.hagyoung_LovePoint)
+            {
+                if (higherPoint >= LovePoint.instance.minseok_LovePoint)
+                {
+                    LovePoint.instance.end_num = 4; // solo
+                    EndingName = "Solo_Ending";
+                }
+                else 
+                {
+                    higherPoint = LovePoint.instance.minseok_LovePoint;
+                    LovePoint.instance.end_num = 3; // minseok
+                    EndingName = "Minseok_Ending";
+                }
+            }                        
+        }
+
+        SaveData.P_instance.SaveAndLoadEndingData(EndingName);
         Next();
     }
 
